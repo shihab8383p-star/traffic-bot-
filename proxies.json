@@ -1,0 +1,1807 @@
+{
+  "lastUpdate": "2026-10-06T09:58:12.841Z",
+  "totalProxies": 180,
+  "comment": "AUTO-FETCHED - 180 HIGH revenue proxies",
+  "proxies": [
+    {
+      "host": "159.65.221.25",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "95.211.174.135",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "NL",
+      "location": "The Netherlands",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "51.15.241.34",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "103.237.102.191",
+      "port": 11111,
+      "username": "",
+      "password": "",
+      "country": "DE",
+      "location": "Germany",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "80.74.54.148",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "DE",
+      "location": "Germany",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "68.183.193.205",
+      "port": 10000,
+      "username": "",
+      "password": "",
+      "country": "CA",
+      "location": "Canada",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "162.214.159.94",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "5.161.103.41",
+      "port": 88,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "202.133.88.173",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "194.182.163.117",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "CH",
+      "location": "Switzerland",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "188.165.199.207",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "34.122.187.196",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "45.26.30.144",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "34.44.49.215",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "162.214.159.94",
+      "port": 8085,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "159.89.239.204",
+      "port": 10000,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "111.119.162.248",
+      "port": 10970,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "107.167.18.122",
+      "port": 443,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "97.74.87.226",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "JP",
+      "location": "Japan",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "89.58.42.118",
+      "port": 3129,
+      "username": "",
+      "password": "",
+      "country": "DE",
+      "location": "Germany",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "109.199.119.160",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "159.203.61.169",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "CA",
+      "location": "Canada",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "139.171.194.91",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "91.92.155.207",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "CH",
+      "location": "Switzerland",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "45.91.248.107",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "143.246.138.227",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "43.173.120.13",
+      "port": 8899,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "185.85.111.18",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "CH",
+      "location": "Switzerland",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "162.214.74.29",
+      "port": 8085,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "144.24.94.153",
+      "port": 1080,
+      "username": "",
+      "password": "",
+      "country": "KR",
+      "location": "South Korea",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "134.209.29.120",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "54.238.38.227",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "JP",
+      "location": "Japan",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "65.109.215.187",
+      "port": 8090,
+      "username": "",
+      "password": "",
+      "country": "FI",
+      "location": "Finland",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "151.243.153.157",
+      "port": 8118,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "165.154.162.73",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "209.97.150.167",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "138.68.60.8",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "172.105.120.179",
+      "port": 443,
+      "username": "",
+      "password": "",
+      "country": "SG",
+      "location": "Singapore",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "165.225.66.42",
+      "port": 11589,
+      "username": "",
+      "password": "",
+      "country": "CH",
+      "location": "Switzerland",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.84.245.79",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "NL",
+      "location": "The Netherlands",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "161.35.70.249",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "DE",
+      "location": "Germany",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "184.75.221.82",
+      "port": 3118,
+      "username": "",
+      "password": "",
+      "country": "CA",
+      "location": "Canada",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "4.144.146.21",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "SG",
+      "location": "Singapore",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "165.225.66.42",
+      "port": 11588,
+      "username": "",
+      "password": "",
+      "country": "CH",
+      "location": "Switzerland",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "140.238.14.161",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "KR",
+      "location": "South Korea",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "3.211.120.181",
+      "port": 443,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "195.26.224.135",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "NL",
+      "location": "The Netherlands",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "194.150.110.134",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "DK",
+      "location": "Denmark",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "198.199.86.11",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "206.245.131.160",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "139.171.194.94",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "139.171.194.85",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "139.171.194.96",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "161.156.6.106",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "47.254.36.25",
+      "port": 11080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "23.251.102.121",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "185.73.39.118",
+      "port": 9999,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "120.232.115.170",
+      "port": 17981,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "84.201.129.108",
+      "port": 8443,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "103.39.70.5",
+      "port": 8181,
+      "username": "",
+      "password": "",
+      "country": "DE",
+      "location": "Germany",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "111.206.4.163",
+      "port": 18888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "120.232.115.57",
+      "port": 17981,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "116.196.150.180",
+      "port": 17981,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "45.174.243.96",
+      "port": 999,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "203.205.49.2",
+      "port": 10200,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "210.211.113.37",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "103.251.232.40",
+      "port": 8090,
+      "username": "",
+      "password": "",
+      "country": "DE",
+      "location": "Germany",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "122.246.3.12",
+      "port": 17981,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "27.185.218.213",
+      "port": 17981,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "65.109.219.108",
+      "port": 2000,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "67.207.92.87",
+      "port": 3129,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "134.199.204.161",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "119.73.109.210",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "210.211.113.35",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "103.158.210.7",
+      "port": 8090,
+      "username": "",
+      "password": "",
+      "country": "DE",
+      "location": "Germany",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "38.188.63.169",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "38.75.82.212",
+      "port": 999,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "104.251.93.219",
+      "port": 16062,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "85.155.228.112",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "13.38.27.183",
+      "port": 11386,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "84.247.171.137",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.210.189.192",
+      "port": 10924,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "18.188.168.99",
+      "port": 8430,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "23.94.68.53",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "51.170.133.249",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "16.18.22.211",
+      "port": 6666,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "35.78.252.142",
+      "port": 5497,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "13.208.246.143",
+      "port": 37417,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "122.246.4.30",
+      "port": 17981,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "16.51.53.116",
+      "port": 8443,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "161.33.8.226",
+      "port": 1314,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "16.28.101.55",
+      "port": 36899,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "3.21.129.156",
+      "port": 1081,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "13.215.184.250",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "85.209.156.148",
+      "port": 1080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "56.155.73.159",
+      "port": 11245,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "90.156.160.234",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "43.133.30.72",
+      "port": 5555,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "54.255.249.161",
+      "port": 5555,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "1.12.125.97",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "43.109.48.180",
+      "port": 9999,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "16.26.208.68",
+      "port": 11682,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "2.56.178.88",
+      "port": 808,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "54.20.46.218",
+      "port": 1080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "13.239.253.213",
+      "port": 59158,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "108.137.124.195",
+      "port": 16931,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "111.193.242.16",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "111.192.53.33",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "43.155.62.157",
+      "port": 443,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "114.249.209.219",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "111.196.30.162",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "111.192.40.90",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "103.194.47.53",
+      "port": 8082,
+      "username": "",
+      "password": "",
+      "country": "DE",
+      "location": "Germany",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "111.193.242.242",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "114.252.201.14",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "114.244.221.178",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "159.223.41.216",
+      "port": 9090,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "123.121.132.32",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "123.121.123.115",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "51.17.99.116",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "114.249.219.180",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "111.201.98.99",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "123.121.208.55",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "123.121.142.252",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "114.249.225.156",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "123.121.208.63",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "123.121.113.161",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "185.191.239.248",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "34.43.46.91",
+      "port": 443,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "114.254.50.97",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "113.45.195.147",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "103.130.61.61",
+      "port": 8081,
+      "username": "",
+      "password": "",
+      "country": "DE",
+      "location": "Germany",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "123.119.179.161",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "123.112.162.30",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "13.212.214.47",
+      "port": 8090,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "45.61.133.104",
+      "port": 7777,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "114.246.207.184",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "123.121.210.208",
+      "port": 8888,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "202.165.92.206",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "JP",
+      "location": "Japan",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "111.230.27.213",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "162.214.74.29",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "16.18.22.211",
+      "port": 10276,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "56.68.116.64",
+      "port": 14963,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "56.112.92.32",
+      "port": 9080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "206.135.21.2",
+      "port": 999,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "38.188.201.10",
+      "port": 999,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "38.175.202.151",
+      "port": 443,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "38.19.36.86",
+      "port": 999,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "143.42.6.185",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "18.117.187.170",
+      "port": 9000,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "85.8.47.209",
+      "port": 7080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "85.8.47.212",
+      "port": 7080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "85.8.47.198",
+      "port": 7080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "85.8.47.208",
+      "port": 7080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "85.8.47.210",
+      "port": 7080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "85.8.47.211",
+      "port": 7080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "85.8.47.207",
+      "port": 7080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "109.195.166.126",
+      "port": 10808,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "18.157.123.132",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "44.216.27.249",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "113.53.60.250",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "AU",
+      "location": "Australia",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "23.177.184.95",
+      "port": 18080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "5.189.159.180",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.210.189.192",
+      "port": 12705,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.210.189.192",
+      "port": 19985,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.210.189.192",
+      "port": 11541,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.171.161.88",
+      "port": 2018,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "92.205.186.129",
+      "port": 1080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "51.38.120.110",
+      "port": 10004,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.210.189.192",
+      "port": 10086,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.210.189.192",
+      "port": 10359,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.210.189.192",
+      "port": 16894,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.210.189.192",
+      "port": 18592,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.210.189.192",
+      "port": 10318,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.210.189.192",
+      "port": 11401,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.210.189.192",
+      "port": 10000,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.210.189.192",
+      "port": 18080,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.210.189.192",
+      "port": 12426,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.210.189.192",
+      "port": 16256,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "62.210.189.192",
+      "port": 10808,
+      "username": "",
+      "password": "",
+      "country": "FR",
+      "location": "France",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "websiteUrl": "https://micro-works-platform-1.onrender.com",
+  "useProxies": true,
+  "noProxyMode": false,
+  
+  "reddit": {
+    "clientId": "",
+    "clientSecret": "",
+    "username": "",
+    "password": ""
+  },
+  
+  "twitter": {
+    "bearerToken": "",
+    "apiKey": "",
+    "apiSecret": "",
+    "accessToken": "",
+    "accessTokenSecret": "",
+    "userId": ""
+  },
+  
+  "pinterest": {
+    "accessToken": "",
+    "appId": "",
+    "appSecret": ""
+  }
+}
