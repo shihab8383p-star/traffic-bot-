@@ -1,35 +1,20 @@
 {
   "name": "traffic-bot-cloud",
-  "version": "4.0.0",
-  "description": "Automated traffic generator with Adsterra integration - Cloud Ready",
+  "version": "5.0.0",
+  "description": "Automated traffic generator - Cloud Optimized",
   "main": "auto-clicker-bot.js",
+  "type": "commonjs",
   "scripts": {
     "start": "node auto-clicker-bot.js",
-    "bot": "node auto-clicker-bot.js",
-    "dashboard": "node dashboard-server.js",
-    "local": "node dashboard-server.js",
-    "cloud": "node auto-clicker-bot.js",
-    "test": "node --version"
+    "build": "echo 'Build complete'"
   },
-  "keywords": [
-    "traffic",
-    "automation",
-    "bot",
-    "cloud",
-    "render",
-    "railway",
-    "oracle"
-  ],
-  "author": "MicroWorks",
-  "license": "MIT",
   "engines": {
-    "node": "20.11.0"
+    "node": "20.11.0",
+    "npm": ">=10.0.0"
   },
-  "type": "commonjs",
   "dependencies": {
-    "axios": "^1.6.0",
-    "cheerio": "^1.0.0-rc.12",
-    "express": "^4.18.2",
-    "puppeteer": "19.11.1"
+    "axios": "1.6.0",
+    "cheerio": "1.0.0-rc.12",
+    "puppeteer": "21.0.0"
   }
 }
