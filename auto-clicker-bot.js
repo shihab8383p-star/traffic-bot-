@@ -983,7 +983,7 @@ class AutoClickerBot {
           '--no-sandbox',
           '--disable-setuid-sandbox',
           '--disable-blink-features=AutomationControlled',
-          '--disable-dev-shm-usage',
+          '--disable-dev-shm-usage', // 🔥 CRITICAL for Railway!
           '--disable-features=IsolateOrigins,site-per-process',
           '--disable-infobars',
           '--disable-notifications',
@@ -1002,6 +1002,9 @@ class AutoClickerBot {
           '--disable-web-security',
           '--ignore-certificate-errors',
           '--ignore-certificate-errors-spki-list',
+          '--no-zygote', // 🔥 FIX: Prevent Railway resource exhaustion!
+          '--single-process', // 🔥 FIX: Use single process mode on Railway!
+          '--disable-gpu', // 🔥 FIX: Disable GPU to save resources
           isMobile ? '--user-agent=mobile' : '--user-agent=desktop'
         ];
       
@@ -1012,6 +1015,7 @@ class AutoClickerBot {
       
       browser = await puppeteer.launch({
         headless: 'new',
+        executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || puppeteer.executablePath(),
         args: browserArgs,
         ignoreHTTPSErrors: true,
         timeout: 10000 // ⚡ FAST: 10 seconds max (down from 60!)
