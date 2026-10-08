@@ -6,7 +6,7 @@
   "type": "commonjs",
   "scripts": {
     "start": "node auto-clicker-bot.js",
-    "build": "echo 'Build complete'"
+    "build": "npm install && npx puppeteer browsers install chrome"
   },
   "engines": {
     "node": "20.11.0",

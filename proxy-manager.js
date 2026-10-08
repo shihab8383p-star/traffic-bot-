@@ -1,37 +1,144 @@
-// Proxy Manager - Rotates through proxies with AUTO-TESTING and REMOVAL
-// Tests proxies and removes dead ones automatically
+// Proxy Manager - Fetches proxies from GitHub and rotates
+// CLOUD-READY: All traffic bots fetch from same GitHub source!
 
 const fs = require('fs');
 const https = require('https');
 const http = require('http');
 const axios = require('axios');
 
+// 🔑 GitHub proxy source (shared by all 13 bots!)
+const GITHUB_PROXY_URL = process.env.GITHUB_PROXY_URL || 
+  'https://raw.githubusercontent.com/YOUR_USERNAME/traffic-bot/main/proxies.json';
+
 class ProxyManager {
   constructor() {
     this.proxies = [];
-    this.deadProxies = []; // Track dead proxies
+    this.deadProxies = [];
     this.currentIndex = 0;
+    this.lastFetchTime = 0;
+    this.fetchInterval = 5 * 60 * 1000; // Refresh every 5 minutes
+    
     this.loadProxies();
   }
   
-  // Get random working proxy with SMART TIER PRIORITY
+  // 🔥 Load proxies (3-tier system: API → GitHub → Local)
+  async loadProxies() {
+    // PRIORITY 1: Try Proxy API first (fully automated!)
+    if (await this.loadProxiesFromAPI()) {
+      console.log('✅ Loaded proxies from Proxy API (AUTOMATED MODE!)');
+      return;
+    }
+    
+    // PRIORITY 2: Try GitHub (cloud deployment fallback)
+    if (await this.fetchFromGitHub()) {
+      console.log('✅ Loaded proxies from GitHub (cloud mode)');
+      return;
+    }
+    
+    // PRIORITY 3: Fallback to local file (local testing)
+    try {
+      const proxyFile = './proxies.json';
+      if (fs.existsSync(proxyFile)) {
+        const data = JSON.parse(fs.readFileSync(proxyFile, 'utf8'));
+        this.proxies = data.proxies || [];
+        console.log(`✅ Loaded ${this.proxies.length} proxies from local file`);
+      } else {
+        console.log('⚠️  No proxies.json found! Bot will run without proxies.');
+      }
+    } catch (error) {
+      console.log('❌ Error loading proxies:', error.message);
+    }
+  }
+  
+  // 🔥 NEW: Load proxies from Proxy API (fully automated!)
+  async loadProxiesFromAPI() {
+    try {
+      const PROXY_API_URL = process.env.PROXY_API_URL || 'http://localhost:3000';
+      
+      console.log(`🔄 Fetching proxies from API: ${PROXY_API_URL}`);
+      
+      const response = await axios.get(`${PROXY_API_URL}/proxies`, {
+        timeout: 10000,
+        headers: {
+          'Cache-Control': 'no-cache'
+        }
+      });
+      
+      if (response.data && response.data.success && response.data.proxies) {
+        this.proxies = response.data.proxies;
+        this.lastFetchTime = Date.now();
+        console.log(`✅ Fetched ${this.proxies.length} fresh proxies from API!`);
+        console.log(`📊 Last updated: ${response.data.lastUpdate}`);
+        return true;
+      }
+      
+      return false;
+    } catch (error) {
+      console.log(`⚠️  Could not fetch from API: ${error.message}`);
+      return false;
+    }
+  }
+  
+  // Fetch proxies from GitHub (CLOUD MODE)
+  async fetchFromGitHub() {
+    try {
+      // Don't fetch too frequently
+      const now = Date.now();
+      if (now - this.lastFetchTime < this.fetchInterval && this.proxies.length > 0) {
+        return true; // Use cached proxies
+      }
+      
+      console.log('🔄 Fetching fresh proxies from GitHub...');
+      
+      const response = await axios.get(GITHUB_PROXY_URL, {
+        timeout: 10000,
+        headers: {
+          'Cache-Control': 'no-cache'
+        }
+      });
+      
+      if (response.data && response.data.proxies) {
+        this.proxies = response.data.proxies;
+        this.lastFetchTime = now;
+        console.log(`✅ Fetched ${this.proxies.length} fresh proxies from GitHub!`);
+        return true;
+      }
+      
+      return false;
+    } catch (error) {
+      console.log('⚠️  Could not fetch from GitHub:', error.message);
+      return false;
+    }
+  }
+  
+  // Auto-refresh proxies periodically (try API first!)
+  async refreshProxies() {
+    console.log('🔄 Auto-refreshing proxies...');
+    
+    // Try API first
+    if (await this.loadProxiesFromAPI()) {
+      return;
+    }
+    
+    // Fallback to GitHub
+    await this.fetchFromGitHub();
+  }
   getRandomProxy() {
     if (this.proxies.length === 0) {
       console.log('⚠️ No proxies available!');
       return null;
     }
     
-    // 🔥 TIER PRIORITY SYSTEM (Weekly rotation ready!)
+    // 🔥 TIER PRIORITY SYSTEM (ALL TIERS INCLUDED!)
     
     // 🥇 TIER S (TOP PRIORITY) - 70% usage - US, France, UK
     const tierS = ['US', 'FR', 'GB'];
     
-    // 🥈 TIER 1 (HIGH VALUE) - 20% usage - Canada, Germany, Australia, Switzerland, Netherlands
-    const tier1 = ['CA', 'DE', 'AU', 'CH', 'NL'];
+    // 🥈 TIER 1 (HIGH VALUE) - 20% usage - Expanded to 7 countries!
+    const tier1 = ['CA', 'DE', 'AU', 'CH', 'NL', 'ES', 'IT'];
     
-    // 🥉 TIER 2 (RISING STARS) - 10% usage - Will be high-value next!
-    // Nordic countries (SE, NO, DK, FI), East Asia (JP, KR, SG), Others (AT, BE, IE, NZ)
-    const tier2 = ['SE', 'NO', 'DK', 'FI', 'JP', 'KR', 'SG', 'AT', 'BE', 'IE', 'NZ'];
+    // 🥉 TIER 2 (GROWING MARKETS) - 10% usage - Expanded to 15 countries!
+    const tier2 = ['SE', 'NO', 'DK', 'FI', 'JP', 'KR', 'SG', 'AT', 'BE', 'IE', 'NZ', 'PL', 'PT', 'CZ', 'GR'];
     
     // Filter proxies by tier
     const tierSProxies = this.proxies.filter(p => tierS.includes(p.country));

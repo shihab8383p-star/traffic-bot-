@@ -1,0 +1,17 @@
+{
+  "name": "proxy-api-server",
+  "version": "1.0.0",
+  "description": "Centralized Proxy API Server for Traffic Bots",
+  "main": "proxy-api.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node proxy-api.js"
+  },
+  "engines": {
+    "node": "20.11.0",
+    "npm": ">=10.0.0"
+  },
+  "dependencies": {
+    "express": "4.18.2"
+  }
+}
