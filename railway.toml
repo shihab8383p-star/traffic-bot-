@@ -1,0 +1,12 @@
+[build]
+builder = "NIXPACKS"
+
+[deploy]
+startCommand = "node proxy-api.js"
+restartPolicyType = "ON_FAILURE"
+restartPolicyMaxRetries = 10
+
+# Default environment variables
+[env]
+PORT = "3000"
+API_KEY = "super-secret-key-123"

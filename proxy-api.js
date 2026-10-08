@@ -7,7 +7,8 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 // 🔒 Simple API key for security (optional)
-const API_KEY = process.env.API_KEY || 'your-secret-key-123';
+// Default key works out of the box - change in Railway environment variables for production
+const API_KEY = process.env.API_KEY || 'super-secret-key-123';
 
 // 💾 In-memory proxy storage
 let proxyPool = {
