@@ -1,11 +1,11 @@
 {
-  "name": "traffic-bot-cloud",
-  "version": "5.0.0",
-  "description": "Automated traffic generator - Cloud Optimized",
-  "main": "auto-clicker-bot.js",
+  "name": "traffic-bot-hyper-speed",
+  "version": "6.0.0",
+  "description": "HYPER-SPEED Bot - 4X FASTER + Railway Optimized",
+  "main": "railway-bot.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node auto-clicker-bot.js",
+    "start": "node railway-bot.js",
     "build": "npm install && npx puppeteer browsers install chrome"
   },
   "engines": {

@@ -1,0 +1,44 @@
+{
+  "comment": "ULTRA-FAST RAILWAY CONFIG - 2x faster + crash-proof",
+  "enableSmartlinkPriority": true,
+  "smartlinkPriorityRatio": 1.0,
+  "enableAdsterraPriority": true,
+  "adsterraPriorityRatio": 1.0,
+  "enableClickTracking": true,
+  "clickTracking": {
+    "adsterraClicks": 0,
+    "nonAdsterraClicks": 0
+  },
+  "enableJobClicking": false,
+  "enableAccountCreation": false,
+  "enableMobileSimulation": true,
+  "enableReturnVisitors": true,
+  "enableReferrers": true,
+  "enableSessionCookies": true,
+  "enableTabSwitching": false,
+  "simultaneousTabs": 3,
+  "sessionInterval": 30000,
+  "maxClicksPerSession": 6,
+  "enableBehaviorSimulation": false,
+  "enableMouseTracking": false,
+  "enableScrollTracking": false,
+  "enableTypingSimulation": false,
+  "useProxies": true,
+  "rotateProxies": true,
+  "maxProxyFailures": 3,
+  "railway": {
+    "lowMemoryMode": true,
+    "singleProcess": true,
+    "disableGPU": true,
+    "maxTabs": 3,
+    "fastTimeout": true,
+    "ultraFastMode": true
+  },
+  "speed": {
+    "browserLaunch": 5000,
+    "pageLoad": 10000,
+    "adView": 1000,
+    "tabSwitch": 300,
+    "sessionWait": 30000
+  }
+}
