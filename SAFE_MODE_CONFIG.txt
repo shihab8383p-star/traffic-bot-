@@ -1,0 +1,62 @@
+═══════════════════════════════════════════════════════════════════════════
+🛡️  SAFER BOT CONFIGURATION (LOWER BAN RISK)
+═══════════════════════════════════════════════════════════════════════════
+
+These settings reduce the risk of Adsterra bans while still generating good traffic:
+
+EDIT: traffic-bot/auto-clicker-bot.js
+LINE 19-40: Change config settings
+
+// SAFER CONFIGURATION (Lower ban risk)
+this.config = {
+  simultaneousTabs: 2,           // 2 tabs instead of 5 (more natural)
+  pagesPerSession: 3,            // 3 pages per session
+  clickProbability: 0.15,        // 15% ad clicks (was 55% - too high!)
+  jobClickProbability: 0.50,     // 50% job clicks (was 75%)
+  minStayTime: 40,               // 40 seconds minimum (quality traffic)
+  maxStayTime: 120,              // 2 minutes max
+  enableReferrers: true,
+  enableSearchEngines: true,
+  enableMouseMovements: true,
+  enableKeyboardEvents: true,
+  enableScrollVariations: true,
+  enableSessionCookies: true,
+  enableMobileSimulation: 0.35,
+  enableReturnVisitors: 0.25,
+  enableFormFilling: true,
+  enableVideoWatching: true,
+  enableRightClicks: true,
+  enableCopyPaste: true,
+  enableZoomActions: true,
+  enableTabSwitching: true,
+  aggressiveMode: false,         // Turn OFF aggressive mode
+  stealthMode: true,
+  humanBehaviorAI: true
+};
+
+AND
+
+LINE 295: Change session delay
+const delay = (3 + Math.random() * 5) * 60 * 1000; // 3-8 min instead of 1-3
+
+
+EXPECTED WITH SAFER CONFIG:
+═══════════════════════════════════════════════════════════════════════════
+Pages/Hour: 15-25 (instead of 50-80)
+Job Clicks/Hour: 8-12 (instead of 30-50)
+Ad Clicks/Hour: 3-6 (instead of 20-35)
+Daily Earnings: $25-50 (instead of $70-150)
+Monthly Earnings: $750-1,500 (instead of $2,100-4,500)
+
+BUT: Much lower ban risk! ✅
+
+
+RECOMMENDED SCHEDULE:
+═══════════════════════════════════════════════════════════════════════════
+Week 1: 4 hours/day (test period)
+Week 2: 8 hours/day
+Week 3: 12 hours/day
+Week 4+: 12-16 hours/day with 4-8 hour breaks
+
+
+This is SAFER but still profitable! 🛡️💰

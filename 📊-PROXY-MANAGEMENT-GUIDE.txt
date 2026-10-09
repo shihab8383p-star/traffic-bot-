@@ -1,0 +1,235 @@
+╔══════════════════════════════════════════════════════════════╗
+║          📊 PROXY MANAGEMENT - COMPLETE GUIDE 📊             ║
+╚══════════════════════════════════════════════════════════════╝
+
+🎯 SIMPLE 3-TOOL SYSTEM:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  CHECK PROXY STATUS
+   📁 File: PROXY-STATUS.bat
+   
+   What it does:
+   ✅ Shows all your current proxies
+   ✅ Groups by country (US, EU, FR, etc.)
+   ✅ Shows HIGH/MID/LOW tier
+   ✅ Quick overview
+   
+   When to use:
+   • Want to see what proxies are loaded
+   • Check proxy count
+   • See country distribution
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2️⃣  TEST IF PROXIES WORK
+   📁 File: TEST-PROXIES-LIVE.bat
+   
+   What it does:
+   ✅ Tests EACH proxy one by one
+   ✅ Shows ✅ WORKING or ❌ DEAD
+   ✅ Creates list of working proxies
+   ✅ Saves to: proxies-working.json
+   
+   When to use:
+   • After adding new proxies
+   • When bots seem slow
+   • Weekly maintenance check
+   
+   Takes: 5-10 seconds per proxy
+   Example: 7 proxies = ~1 minute
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3️⃣  AUTO-REMOVE DEAD PROXIES
+   📁 File: REMOVE-DEAD-PROXIES.bat
+   
+   What it does:
+   ✅ Tests all proxies
+   ✅ Removes dead ones automatically
+   ✅ Keeps only working proxies
+   ✅ Restarts bots with clean list
+   
+   When to use:
+   • After testing shows dead proxies
+   • Weekly cleanup
+   • Performance optimization
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎬 WORKFLOW EXAMPLE:
+
+┌──────────────────────────────────────────────────────────────┐
+│ SCENARIO: You want to check if your proxies are good         │
+└──────────────────────────────────────────────────────────────┘
+
+STEP 1: Check current status
+   → Double-click: PROXY-STATUS.bat
+   → See what you have
+
+STEP 2: Test proxies
+   → Double-click: TEST-PROXIES-LIVE.bat
+   → Wait for test to complete
+   → See which ones are dead
+
+STEP 3: Remove dead ones
+   → Double-click: REMOVE-DEAD-PROXIES.bat
+   → Dead proxies removed
+   → Bots restart with working proxies
+   → DONE! ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 COMPLETE TOOL LIST:
+
+┌──────────────────────────────────────────────────────────────┐
+│ VIEWING & CHECKING:                                          │
+├──────────────────────────────────────────────────────────────┤
+│ PROXY-STATUS.bat         → View current proxies             │
+│ TEST-PROXIES-LIVE.bat    → Test if proxies work             │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│ CLEANING & MAINTENANCE:                                      │
+├──────────────────────────────────────────────────────────────┤
+│ REMOVE-DEAD-PROXIES.bat  → Auto-remove dead proxies         │
+└──────────────────────────────────────────────────────────────┘
+
+┌──────────────────────────────────────────────────────────────┐
+│ ADDING & REPLACING:                                          │
+├──────────────────────────────────────────────────────────────┤
+│ REPLACE-PROXIES.bat      → Replace all proxies              │
+│ AUTO-ADD-PROXIES.bat     → Add more proxies (keep old)      │
+│ 📝-OPEN-PROXY-FILE.bat   → Quick edit proxy file            │
+└──────────────────────────────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 TESTING OUTPUT EXAMPLE:
+
+When you run TEST-PROXIES-LIVE.bat, you'll see:
+
+[1/7] Testing 139.171.194.85:3128... ✅ WORKING
+[2/7] Testing 139.171.194.94:3128... ✅ WORKING
+[3/7] Testing 165.154.162.73:8888... ❌ DEAD
+[4/7] Testing 139.171.194.91:3128... ✅ WORKING
+[5/7] Testing 144.24.94.153:1080... ❌ DEAD
+[6/7] Testing 139.171.194.96:3128... ✅ WORKING
+[7/7] Testing 172.105.120.179:443... ✅ WORKING
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📊 SUMMARY:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Working proxies: 5
+❌ Dead proxies: 2
+📊 Total tested: 7
+
+✅ WORKING PROXIES:
+1. 139.171.194.85:3128 [US]
+2. 139.171.194.94:3128 [US]
+3. 139.171.194.91:3128 [US]
+4. 139.171.194.96:3128 [US]
+5. 172.105.120.179:443 [Unknown]
+
+❌ DEAD PROXIES (Remove these):
+1. 165.154.162.73:8888 [US]
+2. 144.24.94.153:1080 [Unknown]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💾 AUTO-SAVED:
+✅ Working proxies saved to: proxies-working.json
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 WHAT TO DO NEXT:
+
+Option A: Manual cleanup
+   1. Backup: copy proxies.json proxies-old.json
+   2. Replace: copy proxies-working.json proxies.json
+   3. Restart bots
+
+Option B: Auto cleanup (EASIER!)
+   1. Double-click: REMOVE-DEAD-PROXIES.bat
+   2. Done! ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📅 RECOMMENDED SCHEDULE:
+
+Daily:
+   • Check dashboard.html (monitor performance)
+
+Weekly:
+   • Run TEST-PROXIES-LIVE.bat
+   • Run REMOVE-DEAD-PROXIES.bat if needed
+
+When adding new proxies:
+   • Use REPLACE-PROXIES.bat or AUTO-ADD-PROXIES.bat
+   • Then run TEST-PROXIES-LIVE.bat
+   • Then run REMOVE-DEAD-PROXIES.bat
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🆘 TROUBLESHOOTING:
+
+Problem: "All proxies showing as dead"
+Solution:
+   • Check your internet connection
+   • Proxies might be from a bad provider
+   • Try different proxy source
+
+Problem: "Test taking too long"
+Solution:
+   • Each proxy takes 5-10 seconds
+   • Be patient, it's testing connectivity
+   • 50 proxies = ~5 minutes
+
+Problem: "Working proxies file not created"
+Solution:
+   • No working proxies were found
+   • Get better proxies from provider
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 FILES EXPLAINED:
+
+proxies.json
+   → Current ACTIVE proxies used by bots
+   → DON'T edit manually!
+
+proxies-working.json
+   → Created by TEST-PROXIES-LIVE.bat
+   → Contains only tested working proxies
+   → Use this to replace proxies.json
+
+proxies-backup-*.json
+   → Automatic backups
+   → Can restore if needed
+
+new-proxies.txt
+   → Where YOU paste new proxies
+   → Used by REPLACE-PROXIES.bat
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✨ QUICK REFERENCE:
+
+Want to see what you have?
+   → PROXY-STATUS.bat
+
+Want to test if they work?
+   → TEST-PROXIES-LIVE.bat
+
+Want to remove dead ones?
+   → REMOVE-DEAD-PROXIES.bat
+
+Want to add new proxies?
+   → REPLACE-PROXIES.bat
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Made with ❤️ for Shihab
+
+Keep your proxies clean = Keep your bots earning! 💰

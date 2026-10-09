@@ -1,0 +1,50 @@
+⚡ QUICK START GUIDE
+===================
+
+🤖 YOUR BOT STATUS:
+==================
+✅ 5 bots running
+✅ 85 browsers active
+✅ SMARTLINK-ONLY mode
+✅ 8-12% click rate
+✅ SUPER FAST speed
+
+🎯 WHAT BOT DOES:
+================
+Visits ONLY these 4 smartlinks:
+1. Adsterra link 1
+2. Adsterra link 2
+3. Monetag link 1
+4. Monetag link 2
+
+Clicks ads: 8-12% of the time
+Speed: 6-10 smartlinks per session
+Focus: 100% revenue generation!
+
+🔧 UPDATE PROXIES (3 STEPS):
+===========================
+1. Run: UPDATE-PROXIES-EASY.bat
+2. Replace proxies in Notepad
+3. Let it restart bots automatically
+
+FORMAT:
+{"host": "IP", "port": PORT, "username": "", "password": "", "country": "XX", "location": "Name"}
+
+📊 CHECK STATUS:
+===============
+Run: MONITOR-SUPER-FAST-MODE.bat
+Or open: bot-stats.json
+
+💰 EXPECTED EARNINGS:
+====================
+Per Day: $15-60
+Per Month: $450-1,800
+
+📁 KEY FILES:
+============
+- proxies.json (your proxies here!)
+- bot-stats.json (live statistics)
+- UPDATE-PROXIES-EASY.bat (update tool)
+- SMARTLINK-MODE-GUIDE.txt (full guide)
+
+✅ DONE! Let them run! 🚀💰

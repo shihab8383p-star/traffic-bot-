@@ -1,0 +1,160 @@
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║         🌐 WEBSHARE PROXY SETUP - 3 EASY STEPS                ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+
+STEP 1: GET YOUR PROXY LIST
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Open browser → Go to: https://proxy.webshare.io/
+
+2. Log in to your account
+
+3. Click "Proxy" → "Proxy List"
+
+4. Click "Download" button
+
+5. Select format: "Username:Password@Host:Port"
+
+6. Your file will look like:
+   
+   username-rotate:password123@p.webshare.io:80
+   username-rotate:password456@p.webshare.io:80
+   username-rotate:password789@p.webshare.io:80
+   (... 10 lines total)
+
+7. Copy ALL the lines
+
+
+
+STEP 2: AUTO-CONFIGURE PROXIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Open Command Prompt
+
+2. Run these commands:
+
+   cd "C:\Users\Shihab\Documents\Rockstar Games\Social Club\microjob-platform\traffic-bot"
+   
+   node setup-proxies.js
+
+3. When prompted, PASTE your proxy list (from Step 1)
+
+4. Press ENTER twice
+
+5. Done! ✅
+
+   You'll see:
+   ✅ Found 10 proxies!
+   ✅ Proxies configured!
+
+
+
+STEP 3: TEST YOUR PROXIES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Run test command:
+
+   node test-proxies.js
+
+2. Wait for results (30 seconds)
+
+3. You should see:
+
+   🧪 Testing proxy: p.webshare.io...
+   ✅ Proxy working! IP: 142.93.xxx.xxx
+   
+   ✅ 10/10 proxies are working!
+
+4. If all working → Start your traffic bot:
+
+   npm start
+
+
+
+WHAT PROXIES DO FOR YOU
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+WITHOUT PROXIES:                  WITH 10 PROXIES:
+┌─────────────────┐              ┌─────────────────┐
+│ Your IP (1)     │              │ 10 Different    │
+│                 │              │ USA IPs         │
+│ Post 1 ─────────┤              │                 │
+│ Post 2 ─────────┤              │ Post 1 → IP #3  │
+│ Post 3 ─────────┤              │ Post 2 → IP #7  │
+│ Post 4 ─────────┤              │ Post 3 → IP #1  │
+│                 │              │ Post 4 → IP #9  │
+│ ❌ BANNED!      │              │                 │
+└─────────────────┘              │ ✅ NO BAN!      │
+                                 └─────────────────┘
+
+
+
+TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+PROBLEM: "All proxies failed"
+SOLUTION: 
+  → Check username/password are correct
+  → Go to https://proxy.webshare.io/ and verify status
+  → Make sure proxies haven't expired
+
+
+PROBLEM: "No proxies found"
+SOLUTION:
+  → Run: node setup-proxies.js first
+
+
+PROBLEM: "Some proxies failed"
+SOLUTION:
+  → That's okay! Bot will use working ones
+  → You can remove failed proxies from proxies.json
+
+
+PROBLEM: "Bandwidth limit exceeded"
+SOLUTION:
+  → Free plan = 1GB/month (enough for 5,000 posts)
+  → Upgrade to $2.99/month for 10GB if needed
+
+
+
+YOUR PROXY FILE LOCATION
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+After setup, your proxies are saved to:
+
+📁 traffic-bot/proxies.json
+
+You can edit this file directly if needed.
+
+
+
+COMMANDS CHEAT SHEET
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Setup proxies:
+  node setup-proxies.js
+
+Test proxies:
+  node test-proxies.js
+
+Start bot with proxies:
+  npm start
+
+Check proxy status:
+  Go to https://proxy.webshare.io/
+
+
+
+THAT'S IT! 🎉
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+With 10 USA proxies:
+✅ No IP bans
+✅ 10x safer
+✅ Looks like 10 different people
+✅ Maximum reach on Reddit, Twitter, Pinterest
+
+Time to generate that Tier 1 traffic! 💰

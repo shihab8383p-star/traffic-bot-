@@ -1,0 +1,73 @@
+========================================
+   QUICK PROXY UPDATE GUIDE
+========================================
+
+OPTION 1: EASIEST WAY (Copy & Paste)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Double-click "UPDATE-PROXIES.bat"
+2. It will open proxies.json for you
+3. Scroll to the bottom
+4. Add your new proxies like this:
+
+   BEFORE (last line):
+   {"host": "1.2.3.4", "port": 8080, "country": "US"}
+ ]
+}
+
+   AFTER (adding 5.6.7.8:9090):
+   {"host": "1.2.3.4", "port": 8080, "country": "US"},
+   {"host": "5.6.7.8", "port": 9090, "country": "DE"}
+ ]
+}
+
+5. Change number at top: "totalProxies": 52 (add how many you added)
+6. Save file (Ctrl+S)
+7. Choose "Y" to restart bots
+
+
+OPTION 2: PASTE YOUR PROXY LIST HERE
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Got new proxies in this format?
+1.2.3.4:8080
+5.6.7.8:9090
+10.20.30.40:3128
+
+Paste them below this line:
+▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼▼
+
+
+
+
+▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲▲
+
+Then save this file and tell me:
+"I have X new proxies to add"
+
+
+OPTION 3: AUTO-RESTART EVERY 3 HOURS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Want bots to auto-restart every 3 hours to pick up new proxies?
+
+Run this command ONCE in PowerShell (as Admin):
+
+schtasks /create /tn "RestartBots" /tr "cmd /c cd /d 'c:\Users\Shihab\Documents\Rockstar Games\Social Club\microjob-platform\traffic-bot' && taskkill /F /IM node.exe && timeout /t 5 && start-bots.bat" /sc hourly /mo 3
+
+
+CHECKING IF PROXIES ARE WORKING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Method 1: Open "bot-stats.json"
+         Look for "proxyUsage": { }
+         You'll see list of IPs being used!
+
+Method 2: Open "bot-monitor.html"
+         Shows "Active Proxies" count
+
+Method 3: Run "CHECK-BOTS.bat"
+         Shows how many proxies are in use
+
+
+========================================

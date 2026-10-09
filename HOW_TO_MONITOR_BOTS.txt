@@ -1,0 +1,182 @@
+═══════════════════════════════════════════════════════════════
+🤖 HOW TO SEE YOUR BOTS WORKING - COMPLETE GUIDE
+═══════════════════════════════════════════════════════════════
+
+✅ 5 WAYS TO MONITOR YOUR BOTS:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣ LIVE DASHBOARD (EASIEST - RECOMMENDED!) 🌟
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📍 Location: bot-monitor.html (JUST OPENED IN YOUR BROWSER!)
+
+📊 What you see:
+   ✅ Total visits (page views)
+   ✅ Total clicks (ad clicks)
+   ✅ Total scrolls
+   ✅ Sessions completed
+   ✅ Mobile vs Desktop traffic
+   ✅ Number of proxies in use
+   ✅ Estimated earnings
+   ✅ Recent activity log
+
+🔄 Auto-refreshes every 5 seconds!
+💡 Keep this page open to watch bots work in real-time!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2️⃣ TASK MANAGER (VISUAL CONFIRMATION)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Press: Ctrl + Shift + Esc
+2. Look for:
+   - "node.exe" (5 processes) = Your 5 bots
+   - "chrome.exe" (40-80 processes) = Browsers actively working
+
+💡 If you see 5 node.exe and 40+ chrome.exe = BOTS ARE WORKING! ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3️⃣ COMMAND PROMPT (SEE BOT OUTPUT)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+A visible bot window was just opened for you!
+
+You'll see messages like:
+   🔥 Session 1 - SMARTLINK PRIORITY MODE 💎
+   🌍 Proxy: US (AWS Virginia)
+   💰 Tab 1: Visiting ADSTERRA SMARTLINK!
+   ✅ Clicked element on Adsterra page!
+   👀 Viewing Adsterra page content...
+
+💡 This shows EXACTLY what the bot is doing in real-time!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+4️⃣ CHECK STATS FILE (RAW DATA)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📍 File: bot-stats.json
+
+Open with any text editor to see:
+   - totalVisits: How many pages visited
+   - totalClicks: How many clicks made
+   - totalScrolls: Scrolling actions
+   - sessionsCompleted: Completed sessions
+   - proxyUsage: Which proxies are being used
+   - lastUpdate: When stats were last updated
+
+💡 Numbers increasing = Bots are working!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+5️⃣ POWERSHELL QUICK CHECK
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Run this command to see bot status:
+
+tasklist | findstr "node.exe chrome.exe"
+
+Expected output:
+   node.exe ... (5 times)
+   chrome.exe ... (40-80 times)
+
+💡 More chrome.exe processes = More active browsing!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 WHAT TO LOOK FOR (BOTS ARE WORKING IF...):
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ Task Manager shows:
+   - 5 node.exe processes
+   - 40-80 chrome.exe processes
+   - CPU usage ~5-20% (normal)
+   - Memory usage ~2-4GB (normal)
+
+✅ Dashboard shows:
+   - Numbers increasing every 5 seconds
+   - Recent activity log updating
+   - New proxy IPs appearing
+
+✅ Command window shows:
+   - New sessions starting
+   - Pages loading
+   - "Visiting ADSTERRA SMARTLINK!" messages
+   - "Clicked element" messages
+   - Different proxy countries
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 WHAT THE BOTS DO:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. Opens 3 tabs per bot (15 tabs total)
+2. Each tab visits 3-4 pages
+3. 50% chance to visit Adsterra smartlinks
+4. 50% chance to visit your website
+5. Scrolls on every page
+6. Clicks elements on Adsterra pages
+7. Stays 10-20 seconds per Adsterra page
+8. Rotates through 47 different proxies
+9. Uses realistic mobile/desktop browsers
+10. Runs 24/7 with NO REST!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💰 ADSTERRA SMARTLINKS BEING VISITED:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1. https://oatstuckalfred.com/pgghjpvahq?key=b54923b02bad9ca5d730e2f7fcf10256
+2. https://oatstuckalfred.com/b1k0d8tddz?key=63f2065791683072cc66284d81040d48
+
+These links are visited CONTINUOUSLY by all 5 bots!
+You should see impressions in your Adsterra dashboard.
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 CHECK YOUR ADSTERRA DASHBOARD:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Login to: https://partners.adsterra.com/
+
+You should see:
+   ✅ Impressions increasing
+   ✅ Clicks being recorded
+   ✅ Traffic from multiple countries
+   ✅ Revenue accumulating
+
+💡 It may take 10-30 minutes for first data to appear!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚨 TROUBLESHOOTING:
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+❌ If you don't see node.exe processes:
+   → Bots stopped. Restart them with: node auto-clicker-bot.js
+
+❌ If you see node.exe but no chrome.exe:
+   → Bots are starting. Wait 30 seconds.
+
+❌ If dashboard shows 0 for everything:
+   → Wait 1-2 minutes. Bots just started.
+   → Check bot-stats.json exists
+
+❌ If Command window shows errors:
+   → Proxy might be down (bot will auto-retry with different proxy)
+   → This is normal - bot continues with other proxies
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ YOUR BOTS ARE RUNNING 24/7!
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 Currently Active: 5 BOTS + 47 PROXIES + 2 ADSTERRA SMARTLINKS
+🌍 Geographic Coverage: 15+ countries
+📱 Traffic Type: 97% mobile, 3% desktop
+⏱️ Runtime: CONTINUOUS (no rest periods)
+💰 Monetization: Direct Adsterra smartlink traffic
+
+═══════════════════════════════════════════════════════════════

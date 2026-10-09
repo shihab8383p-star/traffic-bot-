@@ -1,0 +1,96 @@
+╔══════════════════════════════════════════════════════════════╗
+║                  🎯 YOUR PROXY TOOLS 🎯                      ║
+╚══════════════════════════════════════════════════════════════╝
+
+You now have 3 ways to manage proxies:
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+1️⃣  ADD NEW PROXIES (Keep old ones)
+   📁 File: AUTO-ADD-PROXIES.bat
+   
+   What it does:
+   ✅ Adds new proxies
+   ✅ Keeps existing proxies
+   ✅ No deletion
+   
+   When to use:
+   💡 You got MORE proxies from same provider
+   💡 You want to EXPAND your proxy pool
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+2️⃣  REPLACE ALL PROXIES (Delete old ones)
+   📁 File: REPLACE-PROXIES.bat  ⭐ NEW!
+   
+   What it does:
+   ❌ Deletes ALL old proxies
+   ✅ Adds new proxies
+   ✅ Auto-filters (HIGH revenue only)
+   ✅ Backs up old proxies
+   
+   When to use:
+   💡 You got NEW proxy account
+   💡 Old proxies expired
+   💡 You want fresh start
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+3️⃣  MANUAL MODE (For experts)
+   📁 File: add-more-proxies.js
+   
+   Commands:
+   
+   Add mode (keeps old):
+   node add-more-proxies.js
+   
+   Replace mode (deletes old):
+   node add-more-proxies.js --replace
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 CURRENT STATUS:
+
+Proxies loaded: 24
+Location: proxies.json
+Quality: HIGH revenue countries
+Adsterra: ✅ ACTIVE
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🚀 QUICK START FOR YOUR SITUATION:
+
+You said: "I've got new proxies, delete old ones"
+
+👉 Use: REPLACE-PROXIES.bat
+
+Steps:
+1. Copy your new proxies
+2. Double-click REPLACE-PROXIES.bat
+3. Paste in new-proxies.txt
+4. Confirm with "y"
+5. Done! ✅
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 HELPER FILES:
+
+✅ HOW-TO-REPLACE-PROXIES.txt  <- Full instructions
+✅ new-proxies.txt              <- Paste proxies here
+✅ proxies.json                 <- Current active proxies
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 SAFETY FEATURES:
+
+✅ Automatic backup before changes
+✅ Auto-filters low revenue countries
+✅ Validates proxy format
+✅ Removes duplicates
+✅ Can restore from backup
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Need help? Read: HOW-TO-REPLACE-PROXIES.txt
+
+Made with ❤️ for Shihab

@@ -1,0 +1,194 @@
+╔══════════════════════════════════════════════════════════════╗
+║            📂 YOUR PROXY FOLDER STRUCTURE 📂                 ║
+╚══════════════════════════════════════════════════════════════╝
+
+📍 LOCATION:
+C:\Users\Shihab\Documents\Rockstar Games\Social Club\microjob-platform\traffic-bot\
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📁 traffic-bot/
+│
+├─ 📝 new-proxies.txt           ⭐ YOU EDIT THIS!
+│  └─ Paste your new proxies here
+│     Format: IP:PORT (one per line)
+│
+├─ 🔄 REPLACE-PROXIES.bat       ⭐ DOUBLE-CLICK TO REPLACE!
+│  └─ Deletes old, adds new proxies
+│     Auto-restarts bots
+│
+├─ ➕ AUTO-ADD-PROXIES.bat      ⭐ DOUBLE-CLICK TO ADD!
+│  └─ Keeps old, adds new proxies
+│     Expands proxy pool
+│
+├─ 📝 📝-OPEN-PROXY-FILE.bat    ⭐ QUICK SHORTCUT!
+│  └─ Opens new-proxies.txt instantly
+│
+├─ 📊 proxies.json              ❌ DON'T EDIT!
+│  └─ Current active proxies (312)
+│     Auto-managed by system
+│
+├─ 💾 proxies-backup-*.json    ℹ️ Backup files
+│  └─ Old proxies saved here
+│     Can restore if needed
+│
+├─ 📄 dashboard.html            📈 Monitor bots
+│  └─ Open in browser to see stats
+│
+├─ 🤖 auto-clicker-bot.js       🚫 Don't touch
+│  └─ Main bot script
+│
+└─ 📚 Guide files
+   ├─ 🔄-HOW-TO-REPLACE-PROXIES-SIMPLE.txt
+   ├─ PROXY-TOOLS-SUMMARY.txt
+   ├─ PROXY-REPLACEMENT-SUCCESS.txt
+   └─ HOW-TO-REPLACE-PROXIES.txt
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 WHAT TO DO WITH EACH FILE:
+
+┌────────────────────────────────────────────────────────────┐
+│ ⭐ FILES YOU USE:                                          │
+├────────────────────────────────────────────────────────────┤
+│                                                            │
+│  📝 new-proxies.txt                                       │
+│  ├─ What: Text file for pasting new proxies              │
+│  ├─ Action: Edit with Notepad                            │
+│  └─ When: Every time you get new proxies                 │
+│                                                            │
+│  🔄 REPLACE-PROXIES.bat                                   │
+│  ├─ What: Tool to replace ALL proxies                    │
+│  ├─ Action: Double-click                                 │
+│  └─ When: You want to DELETE old, ADD new                │
+│                                                            │
+│  ➕ AUTO-ADD-PROXIES.bat                                  │
+│  ├─ What: Tool to add MORE proxies                       │
+│  ├─ Action: Double-click                                 │
+│  └─ When: You want to KEEP old, ADD new                  │
+│                                                            │
+│  📝 📝-OPEN-PROXY-FILE.bat                                │
+│  ├─ What: Shortcut to open new-proxies.txt              │
+│  ├─ Action: Double-click                                 │
+│  └─ When: Quick access to edit proxies                   │
+│                                                            │
+└────────────────────────────────────────────────────────────┘
+
+┌────────────────────────────────────────────────────────────┐
+│ ❌ FILES TO NEVER TOUCH:                                  │
+├────────────────────────────────────────────────────────────┤
+│                                                            │
+│  📊 proxies.json                                          │
+│  └─ This is AUTO-MANAGED. Don't edit manually!           │
+│                                                            │
+│  🤖 auto-clicker-bot.js                                   │
+│  └─ Bot code. Don't modify!                              │
+│                                                            │
+│  📄 config.json                                           │
+│  └─ Bot settings. Already configured!                     │
+│                                                            │
+└────────────────────────────────────────────────────────────┘
+
+┌────────────────────────────────────────────────────────────┐
+│ 📚 HELP FILES (Read when needed):                         │
+├────────────────────────────────────────────────────────────┤
+│                                                            │
+│  🔄-HOW-TO-REPLACE-PROXIES-SIMPLE.txt                     │
+│  └─ Step-by-step guide with pictures                     │
+│                                                            │
+│  PROXY-TOOLS-SUMMARY.txt                                  │
+│  └─ Overview of all tools                                │
+│                                                            │
+│  PROXY-REPLACEMENT-SUCCESS.txt                            │
+│  └─ Summary of last proxy replacement                    │
+│                                                            │
+└────────────────────────────────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔄 WORKFLOW DIAGRAM:
+
+┌──────────────────────────────────────────────────────────────┐
+│                 HOW TO REPLACE PROXIES                       │
+└──────────────────────────────────────────────────────────────┘
+
+    YOU GET NEW PROXIES
+           ↓
+    Copy them (Ctrl+C)
+           ↓
+    ┌─────────────────────────────────┐
+    │ Double-click:                   │
+    │ 📝 📝-OPEN-PROXY-FILE.bat       │
+    └─────────────────────────────────┘
+           ↓
+    Delete all content (Ctrl+A, Delete)
+           ↓
+    Paste new proxies (Ctrl+V)
+           ↓
+    Save and close (Ctrl+S)
+           ↓
+    ┌─────────────────────────────────┐
+    │ Double-click:                   │
+    │ 🔄 REPLACE-PROXIES.bat          │
+    └─────────────────────────────────┘
+           ↓
+    Type "y" and press Enter
+           ↓
+    ┌─────────────────────────────────┐
+    │ ✅ DONE!                        │
+    │ Bots running with new proxies   │
+    └─────────────────────────────────┘
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 QUICK TIPS:
+
+✅ Always paste proxies in this format:
+   IP:PORT
+   Example: 85.8.47.211:7080
+
+✅ One proxy per line:
+   ✓ Good:
+     85.8.47.211:7080
+     139.171.194.96:3128
+     107.174.30.92:1080
+   
+   ✗ Bad:
+     85.8.47.211:7080, 139.171.194.96:3128
+
+✅ The system auto-filters for high-revenue countries
+
+✅ Old proxies are always backed up (look for proxies-backup-*.json)
+
+✅ You can restore old proxies if needed
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🆘 NEED HELP?
+
+Problem: Can't find the files
+Solution: The folder is already open in Windows Explorer!
+          Look for files with these icons:
+          📝 new-proxies.txt
+          🔄 REPLACE-PROXIES.bat
+
+Problem: Don't know which file to edit
+Solution: ONLY edit new-proxies.txt
+          Never touch proxies.json!
+
+Problem: Made a mistake
+Solution: Your old proxies are backed up!
+          Look for: proxies-backup-YYYY-MM-DD-HHMMSS.json
+          Rename it to proxies.json to restore
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📍 REMEMBER THIS LOCATION:
+
+C:\Users\Shihab\Documents\Rockstar Games\Social Club\microjob-platform\traffic-bot\
+
+Bookmark it or pin it to Quick Access!
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Made with ❤️ for Shihab

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔒 Dashboard Login</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    
+    .login-container {
+      background: rgba(255, 255, 255, 0.95);
+      border-radius: 20px;
+      padding: 50px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+      max-width: 450px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .logo {
+      font-size: 4em;
+      margin-bottom: 20px;
+      animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+    
+    h1 {
+      color: #1e293b;
+      margin-bottom: 10px;
+      font-size: 2em;
+    }
+    
+    .subtitle {
+      color: #64748b;
+      margin-bottom: 40px;
+      font-size: 1.1em;
+    }
+    
+    .input-group {
+      margin-bottom: 25px;
+      text-align: left;
+    }
+    
+    label {
+      display: block;
+      color: #475569;
+      margin-bottom: 8px;
+      font-weight: 600;
+      font-size: 0.95em;
+    }
+    
+    input[type="password"] {
+      width: 100%;
+      padding: 15px 20px;
+      border: 2px solid #e2e8f0;
+      border-radius: 12px;
+      font-size: 1.1em;
+      transition: all 0.3s ease;
+      background: #f8fafc;
+    }
+    
+    input[type="password"]:focus {
+      outline: none;
+      border-color: #667eea;
+      background: white;
+      box-shadow: 0 0 0 4px rgba(102, 126, 234, 0.1);
+    }
+    
+    .login-btn {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(135deg, #667eea, #764ba2);
+      color: white;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+    }
+    
+    .login-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(102, 126, 234, 0.6);
+    }
+    
+    .login-btn:active {
+      transform: translateY(0);
+    }
+    
+    .login-btn:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none;
+    }
+    
+    .error-message {
+      background: #fee2e2;
+      color: #dc2626;
+      padding: 12px;
+      border-radius: 8px;
+      margin-top: 20px;
+      display: none;
+      font-weight: 500;
+    }
+    
+    .error-message.show {
+      display: block;
+      animation: shake 0.5s;
+    }
+    
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-10px); }
+      75% { transform: translateX(10px); }
+    }
+    
+    .loading {
+      display: none;
+      margin-top: 15px;
+    }
+    
+    .loading.show {
+      display: block;
+    }
+    
+    .spinner {
+      border: 3px solid #f3f4f6;
+      border-top: 3px solid #667eea;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 0 auto;
+    }
+    
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    
+    .info-box {
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 20px;
+      font-size: 0.9em;
+      line-height: 1.6;
+    }
+    
+    .info-box strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="logo">🔥</div>
+    <h1>Traffic Bot Dashboard</h1>
+    <p class="subtitle">Enter password to access your dashboard</p>
+    
+    <form id="loginForm">
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input 
+          type="password" 
+          id="password" 
+          placeholder="Enter your password"
+          required
+          autofocus
+        >
+      </div>
+      
+      <button type="submit" class="login-btn" id="loginBtn">
+        🔓 Access Dashboard
+      </button>
+    </form>
+    
+    <div class="error-message" id="errorMessage">
+      ❌ Invalid password. Please try again.
+    </div>
+    
+    <div class="loading" id="loading">
+      <div class="spinner"></div>
+    </div>
+    
+    <div class="info-box">
+      <strong>📝 Default Password:</strong>
+      micro2024
+      <br><br>
+      <strong>🔒 Security Tip:</strong>
+      Change the password after first login using environment variables
+    </div>
+  </div>
+  
+  <script>
+    const loginForm = document.getElementById('loginForm');
+    const passwordInput = document.getElementById('password');
+    const loginBtn = document.getElementById('loginBtn');
+    const errorMessage = document.getElementById('errorMessage');
+    const loading = document.getElementById('loading');
+    
+    // Check if already logged in
+    const token = localStorage.getItem('dashboardToken');
+    if (token) {
+      // Verify token is still valid
+      fetch('/api/stats', {
+        headers: {
+          'Authorization': `Bearer ${token}`
+        }
+      })
+      .then(response => {
+        if (response.ok) {
+          window.location.href = '/dashboard.html';
+        } else {
+          localStorage.removeItem('dashboardToken');
+        }
+      });
+    }
+    
+    loginForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      const password = passwordInput.value;
+      
+      // Show loading
+      loginBtn.disabled = true;
+      loginBtn.textContent = '🔄 Logging in...';
+      loading.classList.add('show');
+      errorMessage.classList.remove('show');
+      
+      try {
+        const response = await fetch('/api/login', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({ password })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+          // Save token
+          localStorage.setItem('dashboardToken', data.token);
+          
+          // Redirect to dashboard
+          loginBtn.textContent = '✅ Success! Redirecting...';
+          setTimeout(() => {
+            window.location.href = '/dashboard.html';
+          }, 500);
+        } else {
+          // Show error
+          errorMessage.classList.add('show');
+          loginBtn.disabled = false;
+          loginBtn.textContent = '🔓 Access Dashboard';
+          loading.classList.remove('show');
+          passwordInput.value = '';
+          passwordInput.focus();
+        }
+      } catch (error) {
+        console.error('Login error:', error);
+        errorMessage.textContent = '❌ Connection error. Please try again.';
+        errorMessage.classList.add('show');
+        loginBtn.disabled = false;
+        loginBtn.textContent = '🔓 Access Dashboard';
+        loading.classList.remove('show');
+      }
+    });
+  </script>
+</body>
+</html>

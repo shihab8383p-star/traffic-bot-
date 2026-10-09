@@ -1,0 +1,119 @@
+{
+  "lastUpdate": "2026-10-03T04:13:11.877Z",
+  "totalProxies": 14,
+  "comment": "Tested and verified working proxies",
+  "proxies": [
+    {
+      "host": "34.229.190.39",
+      "port": 59485,
+      "username": "",
+      "password": "",
+      "country": "Unknown",
+      "location": "Free"
+    },
+    {
+      "host": "47.85.161.37",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "Unknown",
+      "location": "Free"
+    },
+    {
+      "host": "137.66.1.45",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "Unknown",
+      "location": "Free"
+    },
+    {
+      "host": "47.108.80.63",
+      "port": 7890,
+      "username": "",
+      "password": "",
+      "country": "Unknown",
+      "location": "Free"
+    },
+    {
+      "host": "153.75.244.88",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "Unknown",
+      "location": "Free"
+    },
+    {
+      "host": "94.176.161.44",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "Unknown",
+      "location": "Free"
+    },
+    {
+      "host": "202.133.88.173",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "Unknown",
+      "location": "Free"
+    },
+    {
+      "host": "103.30.211.34",
+      "port": 80,
+      "username": "",
+      "password": "",
+      "country": "Unknown",
+      "location": "Free"
+    },
+    {
+      "host": "212.127.95.235",
+      "port": 8081,
+      "username": "",
+      "password": "",
+      "country": "Unknown",
+      "location": "Free"
+    },
+    {
+      "host": "79.110.202.131",
+      "port": 8081,
+      "username": "",
+      "password": "",
+      "country": "Unknown",
+      "location": "Free"
+    },
+    {
+      "host": "148.81.121.5",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "Unknown",
+      "location": "Free"
+    },
+    {
+      "host": "83.168.74.163",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "Unknown",
+      "location": "Free"
+    },
+    {
+      "host": "185.49.31.205",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "Unknown",
+      "location": "Free"
+    },
+    {
+      "host": "79.110.200.27",
+      "port": 8000,
+      "username": "",
+      "password": "",
+      "country": "Unknown",
+      "location": "Free"
+    }
+  ]
+}

@@ -2,7 +2,7 @@
 // AI-powered behavior, advanced evasion, maximum earnings
 
 const puppeteer = require('puppeteer');
-const ProxyManager = require('./proxy-manager');
+const ProxyManager = require('./proxy-manager-simple');
 const fs = require('fs');
 
 class AutoClickerBot {

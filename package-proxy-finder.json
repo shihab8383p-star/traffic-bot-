@@ -1,0 +1,17 @@
+{
+  "name": "proxy-finder-bot",
+  "version": "1.0.0",
+  "description": "Automated Proxy Finder Bot with API Integration",
+  "main": "proxy-finder-api.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node proxy-finder-api.js"
+  },
+  "engines": {
+    "node": "20.11.0",
+    "npm": ">=10.0.0"
+  },
+  "dependencies": {
+    "axios": "1.6.0"
+  }
+}

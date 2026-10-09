@@ -1,0 +1,25 @@
+{
+  "websiteUrl": "https://cinestream-cs.netlify.app",
+  
+  "reddit": {
+    "clientId": "YOUR_REDDIT_CLIENT_ID",
+    "clientSecret": "YOUR_REDDIT_CLIENT_SECRET",
+    "username": "YOUR_REDDIT_USERNAME",
+    "password": "YOUR_REDDIT_PASSWORD"
+  },
+  
+  "twitter": {
+    "bearerToken": "YOUR_TWITTER_BEARER_TOKEN",
+    "apiKey": "YOUR_TWITTER_API_KEY",
+    "apiSecret": "YOUR_TWITTER_API_SECRET",
+    "accessToken": "YOUR_TWITTER_ACCESS_TOKEN",
+    "accessTokenSecret": "YOUR_TWITTER_ACCESS_TOKEN_SECRET",
+    "userId": "YOUR_TWITTER_USER_ID"
+  },
+  
+  "pinterest": {
+    "accessToken": "YOUR_PINTEREST_ACCESS_TOKEN",
+    "appId": "YOUR_PINTEREST_APP_ID",
+    "appSecret": "YOUR_PINTEREST_APP_SECRET"
+  }
+}

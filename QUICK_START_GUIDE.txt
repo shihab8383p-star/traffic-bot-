@@ -1,0 +1,101 @@
+╔════════════════════════════════════════════════════════╗
+║          🚀 TRAFFIC BOT - QUICK START GUIDE           ║
+╚════════════════════════════════════════════════════════╝
+
+📍 IMPORTANT: Always run commands from the bot folder!
+
+Bot folder location:
+C:\Users\Shihab\Documents\Rockstar Games\Social Club\microjob-platform\traffic-bot
+
+
+═══════════════════════════════════════════════════════
+
+✅ HOW TO CHECK BOT STATUS
+
+Option 1: Double-click this file
+   📁 CHECK_STATUS.bat
+
+Option 2: Open Command Prompt in bot folder and run:
+   npm run check
+
+Option 3: Navigate to bot folder first:
+   cd "C:\Users\Shihab\Documents\Rockstar Games\Social Club\microjob-platform\traffic-bot"
+   npm run check
+
+═══════════════════════════════════════════════════════
+
+🚀 HOW TO START THE BOT
+
+1. Open Command Prompt
+2. Navigate to bot folder:
+   cd "C:\Users\Shihab\Documents\Rockstar Games\Social Club\microjob-platform\traffic-bot"
+3. Run:
+   npm run bot
+
+═══════════════════════════════════════════════════════
+
+🛑 HOW TO STOP THE BOT
+
+In the bot terminal window, press:
+   Ctrl + C
+
+═══════════════════════════════════════════════════════
+
+📊 WHAT THE STATUS SHOWS
+
+✅ Bot is RUNNING - Bot is working!
+❌ Bot is NOT running - Start it with "npm run bot"
+
+📄 Total Pages - Pages visited
+🖱️ Total Clicks - Ad + Job clicks
+👤 Accounts Created - Auto-generated accounts
+💰 Earnings - Estimated money earned
+
+═══════════════════════════════════════════════════════
+
+📁 IMPORTANT FILES
+
+bot-stats.json - Real-time statistics
+bot-accounts.json - Created accounts (email/password)
+CHECK_STATUS.bat - Quick status checker (double-click me!)
+
+═══════════════════════════════════════════════════════
+
+❓ TROUBLESHOOTING
+
+Problem: "npm error ENOENT"
+Solution: You're in wrong folder! Navigate to bot folder first.
+
+Problem: Bot not running
+Solution: cd to bot folder, then run "npm run bot"
+
+Problem: Can't find bot folder
+Solution: Copy this path:
+C:\Users\Shihab\Documents\Rockstar Games\Social Club\microjob-platform\traffic-bot
+
+═══════════════════════════════════════════════════════
+
+🎯 QUICK COMMANDS (Run from bot folder!)
+
+npm run bot      - Start the bot
+npm run check    - Check bot status  
+npm run local    - Start dashboard
+Ctrl+C           - Stop bot
+
+═══════════════════════════════════════════════════════
+
+💡 PRO TIP
+
+Create a shortcut to CHECK_STATUS.bat on your desktop for easy access!
+
+Right-click CHECK_STATUS.bat → Send to → Desktop (create shortcut)
+
+═══════════════════════════════════════════════════════
+
+🔥 YOUR BOT IS NOW RUNNING!
+
+Current Status: ✅ Active (check with CHECK_STATUS.bat)
+Features: Account creation, Ad clicking, 24/7 operation
+Proxies: 20 proxies configured
+
+═══════════════════════════════════════════════════════
