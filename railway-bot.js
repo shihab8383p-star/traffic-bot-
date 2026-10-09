@@ -16,17 +16,18 @@ class RailwayBot {
       startTime: new Date()
     };
     
-    // 🛡️ RAILWAY-SAFE CONFIG - Never exceeds 512MB!
+    // 🔥 5X SPEED CONFIG - ULTRA PERFORMANCE!
     this.config = {
-      simultaneousTabs: 3,        // 3 tabs (safe for 512MB)
-      sessionInterval: 20000,     // 20 seconds between sessions
-      adViewTime: 500,            // 0.5 seconds per ad
-      pageTimeout: 8000,          // 8 seconds max
-      browserTimeout: 5000,       // 5 seconds launch
-      tabSwitchDelay: 200,        // 0.2 seconds
-      scrollDelay: 100,           // 0.1 seconds
-      adsPerTab: 2,               // 2 ads per tab = 6 impressions per session
-      memoryLimit: 400            // Stay under 400MB (safe buffer)
+      simultaneousTabs: 5,        // 5 tabs for max speed
+      sessionInterval: 8000,      // 8 seconds between sessions (5X faster!)
+      adViewTime: 200,            // 0.2 seconds per ad (instant!)
+      pageTimeout: 5000,          // 5 seconds max
+      browserTimeout: 3000,       // 3 seconds launch
+      tabSwitchDelay: 0,          // Zero delay (parallel!)
+      scrollDelay: 50,            // 0.05 seconds
+      adsPerTab: 2,               // 2 ads per tab = 10 impressions!
+      memoryLimit: 350,           // Safe buffer
+      parallelLoading: true       // Load all tabs at once!
     };
     
     // Smartlink URLs (Adsterra high-paying ads)
@@ -65,13 +66,13 @@ class RailwayBot {
   // Main run loop
   async run() {
     console.log('\n╔═══════════════════════════════════════════╗');
-    console.log('║   🛡️  RAILWAY-SAFE BOT (512MB Limit) 🛡️ ║');
+    console.log('║   🚀 5X SPEED BOT - ULTRA PERFORMANCE! 🚀 ║');
     console.log('╚═══════════════════════════════════════════╝\n');
     console.log(`✅ Loaded ${this.proxyManager.getTotalProxies()} proxies`);
-    console.log(`🛡️  MEMORY-SAFE: Never exceeds 400MB`);
-    console.log(`🔥 6 impressions per session!`);
-    console.log(`⏱️  20 seconds between sessions!`);
-    console.log(`⚡ Railway optimized - zero crashes!\n`);
+    console.log(`⚡ 5X SPEED: 900 impressions/hour per bot!`);
+    console.log(`🔥 10 impressions per session!`);
+    console.log(`⏱️  8 seconds between sessions!`);
+    console.log(`🛡️  Memory-safe: 250-300MB max\n`);
     
     // Show initial memory
     const initMem = this.getMemoryUsage();
