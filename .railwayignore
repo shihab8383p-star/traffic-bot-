@@ -1,0 +1,74 @@
+# Ignore server files (not needed for bot)
+proxy-api.js
+dashboard-server.js
+server.js
+dashboard.html
+dashboard.js
+login.html
+
+# Ignore old bot versions
+auto-clicker-bot.js
+index.js
+pinterest-bot.js
+reddit-bot.js
+twitter-bot.js
+
+# Ignore deployment configs for other platforms
+render.yaml
+netlify.toml
+dashboard-deploy/
+netlify/
+
+# Ignore documentation and scripts
+*.md
+*.txt
+*.bat
+*.ps1
+
+# Ignore test and utility files
+test-*.js
+verify-*.js
+check-*.js
+setup-*.js
+quick-*.js
+find-*.js
+fetch-*.js
+merge-*.js
+sync-*.js
+upload-*.js
+add-*.js
+convert-*.ps1
+
+# Ignore proxy management files (bot has built-in)
+proxy-finder-*.js
+proxy-monitor.js
+proxy-status-check.js
+proxy-manager-cloud.js
+proxy-manager.js
+
+# Ignore old configs
+config.example.json
+config-*.json
+package-bot2.json
+package-proxy-*.json
+package-soax-finder.json
+
+# Ignore bot monitoring
+bot-monitor.html
+turbo-mode.js
+deploy.js
+
+# Ignore proxy files
+proxies-*.json
+failed-proxies.json
+working-proxies.json
+my-proxies.txt
+new-proxies.txt
+
+# Node modules and cache
+node_modules/
+.npm/
+.cache/
+
+# Chrome
+chrome/
