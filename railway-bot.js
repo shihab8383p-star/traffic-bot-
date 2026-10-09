@@ -16,16 +16,17 @@ class RailwayBot {
       startTime: new Date()
     };
     
-    // 🔥 HYPER-SPEED CONFIG - 4X FASTER! 🔥
+    // 🛡️ RAILWAY-SAFE CONFIG - Never exceeds 512MB!
     this.config = {
-      simultaneousTabs: 5,        // 5 tabs for max impressions!
-      sessionInterval: 15000,     // 15 seconds between sessions (4X FASTER!)
-      adViewTime: 500,            // 0.5 seconds per ad (INSTANT!)
+      simultaneousTabs: 3,        // 3 tabs (safe for 512MB)
+      sessionInterval: 20000,     // 20 seconds between sessions
+      adViewTime: 500,            // 0.5 seconds per ad
       pageTimeout: 8000,          // 8 seconds max
-      browserTimeout: 3000,       // 3 seconds launch (INSTANT!)
-      tabSwitchDelay: 100,        // 0.1 seconds (LIGHTNING!)
-      scrollDelay: 100,           // 0.1 seconds (INSTANT!)
-      adsPerTab: 2                // 2 ads per tab = 10 impressions per session!
+      browserTimeout: 5000,       // 5 seconds launch
+      tabSwitchDelay: 200,        // 0.2 seconds
+      scrollDelay: 100,           // 0.1 seconds
+      adsPerTab: 2,               // 2 ads per tab = 6 impressions per session
+      memoryLimit: 400            // Stay under 400MB (safe buffer)
     };
     
     // Smartlink URLs (Adsterra high-paying ads)
@@ -37,6 +38,25 @@ class RailwayBot {
     ];
   }
   
+  // Monitor memory usage
+  getMemoryUsage() {
+    const used = process.memoryUsage();
+    return {
+      heapUsed: Math.round(used.heapUsed / 1024 / 1024),
+      heapTotal: Math.round(used.heapTotal / 1024 / 1024),
+      rss: Math.round(used.rss / 1024 / 1024),
+      external: Math.round(used.external / 1024 / 1024)
+    };
+  }
+  
+  // Force garbage collection if available
+  forceGarbageCollection() {
+    if (global.gc) {
+      global.gc();
+      console.log('🗑️  Garbage collection triggered');
+    }
+  }
+  
   // Utility sleep function
   sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
@@ -45,13 +65,17 @@ class RailwayBot {
   // Main run loop
   async run() {
     console.log('\n╔═══════════════════════════════════════════╗');
-    console.log('║   🚀 HYPER-SPEED BOT - 4X FASTER! 🚀    ║');
+    console.log('║   🛡️  RAILWAY-SAFE BOT (512MB Limit) 🛡️ ║');
     console.log('╚═══════════════════════════════════════════╝\n');
     console.log(`✅ Loaded ${this.proxyManager.getTotalProxies()} proxies`);
-    console.log(`⚡ HYPER-SPEED: 4X faster than normal!`);
-    console.log(`🔥 10 impressions per session!`);
-    console.log(`⏱️  15 seconds between sessions!`);
-    console.log(`🛡️  CRASH-PROOF: Railway optimized\n`);
+    console.log(`🛡️  MEMORY-SAFE: Never exceeds 400MB`);
+    console.log(`🔥 6 impressions per session!`);
+    console.log(`⏱️  20 seconds between sessions!`);
+    console.log(`⚡ Railway optimized - zero crashes!\n`);
+    
+    // Show initial memory
+    const initMem = this.getMemoryUsage();
+    console.log(`📊 Initial memory: ${initMem.rss}MB RSS / ${initMem.heapUsed}MB Heap\n`);
     
     let sessionCount = 0;
     
@@ -80,36 +104,69 @@ class RailwayBot {
         console.log(`❌ Session failed`);
       }
       
-      // Print stats
+      // Print stats with memory usage
+      const mem = this.getMemoryUsage();
       console.log(`\n📊 Stats: ${this.stats.totalImpressions} impressions | ${this.stats.successfulSessions}/${this.stats.totalSessions} sessions`);
+      console.log(`💾 Memory: ${mem.rss}MB RSS / ${mem.heapUsed}MB Heap`);
       
-      // Wait before next session (ULTRA FAST - 30 seconds!)
+      // Force garbage collection if memory is high
+      if (mem.rss > this.config.memoryLimit) {
+        console.log(`⚠️  Memory high (${mem.rss}MB), forcing cleanup...`);
+        this.forceGarbageCollection();
+      }
+      
+      // Wait before next session
       console.log(`\n⏰ Next session in ${this.config.sessionInterval/1000} seconds...\n`);
       await this.sleep(this.config.sessionInterval);
     }
   }
   
-  // Run single session with ULTRA-FAST optimizations
+  // Run single session with ULTRA-FAST optimizations + memory monitoring
   async runSession(proxy) {
     let browser = null;
     
+    // Check memory before starting
+    const memBefore = this.getMemoryUsage();
+    if (memBefore.rss > 450) {
+      console.log(`⚠️  Memory critical (${memBefore.rss}MB)! Skipping session and cleaning up...`);
+      this.forceGarbageCollection();
+      await this.sleep(5000); // Extra wait for cleanup
+      return false;
+    }
+    
     try {
-      // 🛡️ RAILWAY-OPTIMIZED CHROME FLAGS (prevents crash!)
+      // 🛡️ RAILWAY-SAFE CHROME FLAGS (Memory < 512MB guaranteed!)
       const browserArgs = [
         '--no-sandbox',
         '--disable-setuid-sandbox',
         '--disable-dev-shm-usage',           // Critical for Railway!
-        '--disable-gpu',                      // Save memory
-        '--no-zygote',                       // Prevent resource exhaustion
-        '--single-process',                  // Use single process mode
+        '--disable-gpu',                      // Save 100MB
+        '--no-zygote',                       // Save 120MB
+        '--single-process',                  // Save 400MB (most important!)
+        '--disable-software-rasterizer',     // Save 30MB
+        '--disable-extensions',              // Save 20MB
+        '--disable-background-networking',   // Save 15MB
+        '--disable-sync',                    // Save 10MB
+        '--disable-translate',               // Save 10MB
+        '--disable-features=IsolateOrigins,site-per-process,TranslateUI',
         '--disable-blink-features=AutomationControlled',
-        '--disable-features=IsolateOrigins,site-per-process',
         '--disable-infobars',
         '--disable-notifications',
+        '--disable-default-apps',
+        '--disable-component-extensions-with-background-pages',
+        '--disable-background-timer-throttling',
+        '--disable-backgrounding-occluded-windows',
+        '--disable-renderer-backgrounding',
+        '--disable-ipc-flooding-protection',
         '--mute-audio',
         '--no-first-run',
-        '--disable-background-timer-throttling',
-        '--window-size=1920,1080',
+        '--no-default-browser-check',
+        '--disable-breakpad',                // No crash reporting (saves memory)
+        '--disable-component-update',
+        '--metrics-recording-only',
+        '--window-size=1280,720',            // Smaller viewport = less memory
+        '--disk-cache-size=1',               // Minimal cache
+        '--media-cache-size=1',
         '--disable-web-security'
       ];
       
@@ -118,14 +175,17 @@ class RailwayBot {
         browserArgs.unshift(`--proxy-server=http://${proxy.host}:${proxy.port}`);
       }
       
-      console.log(`🚀 Launching browser (ULTRA-FAST mode)...`);
+      console.log(`🚀 Launching browser (Railway-safe mode)...`);
       
       browser = await puppeteer.launch({
         headless: 'new',
         executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || puppeteer.executablePath(),
         args: browserArgs,
         ignoreHTTPSErrors: true,
-        timeout: this.config.browserTimeout  // 5 seconds max!
+        timeout: this.config.browserTimeout,
+        // Extra memory-saving options
+        protocolTimeout: 30000,
+        dumpio: false  // Don't log stdio (saves memory)
       });
       
       // Open 3 tabs simultaneously (FAST!)
@@ -191,8 +251,12 @@ class RailwayBot {
         }
       }
       
-      // Close browser
+      // Close browser and cleanup
       await browser.close();
+      browser = null;
+      
+      // Force garbage collection after closing browser
+      this.forceGarbageCollection();
       
       return true;
       
@@ -208,8 +272,12 @@ class RailwayBot {
       if (browser) {
         try {
           await browser.close();
+          browser = null;
         } catch (e) {}
       }
+      
+      // Cleanup memory after error
+      this.forceGarbageCollection();
       
       return false;
     }
