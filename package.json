@@ -5,8 +5,7 @@
   "main": "railway-bot.js",
   "type": "commonjs",
   "scripts": {
-    "start": "node railway-bot.js",
-    "build": "npm install && npx puppeteer browsers install chrome"
+    "start": "node railway-bot.js"
   },
   "engines": {
     "node": ">=18.0.0",
