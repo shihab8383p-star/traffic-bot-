@@ -1,74 +1,105 @@
-# Ignore server files (not needed for bot)
+# ============================================
+# RAILWAY DEPLOYMENT - ESSENTIAL FILES ONLY
+# ============================================
+# Railway will ONLY upload files NOT listed here
+
+# === IGNORE ALL MARKDOWN/DOCUMENTATION ===
+*.md
+*.txt
+*.bat
+*.ps1
+
+# === IGNORE ALL OLD BOTS ===
+auto-clicker-bot.js
+index.js
+pinterest-bot.js
+reddit-bot.js
+twitter-bot.js
+turbo-mode.js
+deploy.js
+
+# === IGNORE ALL SERVER FILES ===
 proxy-api.js
 dashboard-server.js
 server.js
 dashboard.html
 dashboard.js
 login.html
+bot-monitor.html
 
-# Ignore old bot versions
-auto-clicker-bot.js
-index.js
-pinterest-bot.js
-reddit-bot.js
-twitter-bot.js
-
-# Ignore deployment configs for other platforms
-render.yaml
-netlify.toml
-dashboard-deploy/
-netlify/
-
-# Ignore documentation and scripts
-*.md
-*.txt
-*.bat
-*.ps1
-
-# Ignore test and utility files
-test-*.js
-verify-*.js
-check-*.js
-setup-*.js
-quick-*.js
-find-*.js
-fetch-*.js
-merge-*.js
-sync-*.js
-upload-*.js
-add-*.js
-convert-*.ps1
-
-# Ignore proxy management files (bot has built-in)
+# === IGNORE ALL PROXY TOOLS ===
 proxy-finder-*.js
 proxy-monitor.js
 proxy-status-check.js
 proxy-manager-cloud.js
 proxy-manager.js
+add-*.js
+fetch-*.js
+find-*.js
+test-*.js
+verify-*.js
+check-*.js
+setup-*.js
+quick-*.js
+merge-*.js
+sync-*.js
+upload-*.js
+auto-*.js
+ultra-*.js
+FAST-*.js
 
-# Ignore old configs
+# === IGNORE ALL CONFIG BACKUPS ===
 config.example.json
 config-*.json
 package-bot2.json
 package-proxy-*.json
 package-soax-finder.json
 
-# Ignore bot monitoring
-bot-monitor.html
-turbo-mode.js
-deploy.js
-
-# Ignore proxy files
-proxies-*.json
+# === IGNORE ALL PROXY BACKUPS ===
+proxies-backup-*.json
+proxies-found.json
+proxies-working.json
 failed-proxies.json
 working-proxies.json
 my-proxies.txt
 new-proxies.txt
+MY-180-PROXIES.txt
+US-PROXIES-ACTIVE.txt
 
-# Node modules and cache
+# === IGNORE BOT DATA FILES ===
+bot-accounts.json
+bot-stats.json
+
+# === IGNORE NETLIFY/DASHBOARD ===
+netlify.toml
+netlify/
+dashboard-deploy/
+
+# === IGNORE CHROME ===
+chrome/
+
+# === IGNORE NODE MODULES ===
 node_modules/
 .npm/
 .cache/
 
-# Chrome
-chrome/
+# === IGNORE ENV FILES ===
+.env
+.env.example
+.nvmrc
+
+# === IGNORE GIT ===
+.git/
+.gitignore
+
+# ============================================
+# RAILWAY WILL ONLY UPLOAD THESE 7 FILES:
+# ============================================
+# ✅ railway-bot.js          - Main bot
+# ✅ proxy-manager-simple.js - Proxy loader  
+# ✅ proxies.json            - 93 proxies
+# ✅ package.json            - Dependencies
+# ✅ package-lock.json       - Lock file
+# ✅ Procfile                - Start command
+# ✅ nixpacks.toml           - Build config
+# ✅ railway.json            - Railway settings
