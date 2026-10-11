@@ -69,7 +69,7 @@ class RailwayBot {
     console.log('\n╔═══════════════════════════════════════════════════╗');
     console.log('║  🔥 10X FAST & FURIOUS MODE - ULTIMATE SPEED! 🔥  ║');
     console.log('╚═══════════════════════════════════════════════════╝\n');
-    console.log(`✅ Loaded ${this.proxyManager.getTotalProxies()} proxies`);
+    console.log(`✅ Loaded ${this.proxyManager.getTotalProxies()} hand-picked proxies`);
     console.log(`⚡ 10X SPEED: 1,800 impressions/hour per bot!`);
     console.log(`🔥 15 impressions per session!`);
     console.log(`⏱️  3 seconds per session + 2 seconds wait = 5 seconds total!`);
