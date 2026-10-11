@@ -1,4 +1,0 @@
-[deploy]
-startCommand = "node railway-bot.js"
-restartPolicyType = "ON_FAILURE"
-restartPolicyMaxRetries = 10
