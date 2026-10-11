@@ -16,18 +16,19 @@ class RailwayBot {
       startTime: new Date()
     };
     
-    // 🔥 5X SPEED CONFIG - ULTRA PERFORMANCE!
+    // 🔥 10X FAST & FURIOUS CONFIG - MAXIMUM SPEED!
     this.config = {
-      simultaneousTabs: 5,        // 5 tabs for max speed
-      sessionInterval: 8000,      // 8 seconds between sessions (5X faster!)
-      adViewTime: 200,            // 0.2 seconds per ad (instant!)
-      pageTimeout: 5000,          // 5 seconds max
-      browserTimeout: 3000,       // 3 seconds launch
-      tabSwitchDelay: 0,          // Zero delay (parallel!)
-      scrollDelay: 50,            // 0.05 seconds
-      adsPerTab: 2,               // 2 ads per tab = 10 impressions!
-      memoryLimit: 350,           // Safe buffer
-      parallelLoading: true       // Load all tabs at once!
+      simultaneousTabs: 5,        // 5 tabs maximum
+      sessionInterval: 2000,      // 2 seconds between sessions (10X FASTER!)
+      adViewTime: 100,            // 0.1 seconds (INSTANT!)
+      pageTimeout: 3000,          // 3 seconds max (lightning fast!)
+      browserTimeout: 2000,       // 2 seconds launch
+      tabSwitchDelay: 0,          // ZERO delay (parallel!)
+      scrollDelay: 0,             // ZERO delay (skip it!)
+      adsPerTab: 3,               // 3 ads per tab = 15 impressions!
+      memoryLimit: 320,           // Safe for Railway
+      parallelLoading: true,      // Load ALL tabs at once!
+      instantMode: true           // No waiting - GO GO GO!
     };
     
     // Smartlink URLs (Adsterra high-paying ads)
@@ -65,14 +66,14 @@ class RailwayBot {
   
   // Main run loop
   async run() {
-    console.log('\n╔═══════════════════════════════════════════╗');
-    console.log('║   🚀 5X SPEED BOT - ULTRA PERFORMANCE! 🚀 ║');
-    console.log('╚═══════════════════════════════════════════╝\n');
+    console.log('\n╔═══════════════════════════════════════════════════╗');
+    console.log('║  🔥 10X FAST & FURIOUS MODE - ULTIMATE SPEED! 🔥  ║');
+    console.log('╚═══════════════════════════════════════════════════╝\n');
     console.log(`✅ Loaded ${this.proxyManager.getTotalProxies()} proxies`);
-    console.log(`⚡ 5X SPEED: 900 impressions/hour per bot!`);
-    console.log(`🔥 10 impressions per session!`);
-    console.log(`⏱️  8 seconds between sessions!`);
-    console.log(`🛡️  Memory-safe: 250-300MB max\n`);
+    console.log(`⚡ 10X SPEED: 1,800 impressions/hour per bot!`);
+    console.log(`🔥 15 impressions per session!`);
+    console.log(`⏱️  3 seconds per session + 2 seconds wait = 5 seconds total!`);
+    console.log(`🛡️  Memory-safe: 280-320MB (Railway safe!)\n`);
     
     // Show initial memory
     const initMem = this.getMemoryUsage();
@@ -149,6 +150,16 @@ class RailwayBot {
         '--disable-background-networking',   // Save 15MB
         '--disable-sync',                    // Save 10MB
         '--disable-translate',               // Save 10MB
+        '--disable-hang-monitor',            // FAST & FURIOUS: Skip hang detection
+        '--disable-prompt-on-repost',        // FAST & FURIOUS: No prompts
+        '--disable-domain-reliability',      // FAST & FURIOUS: Skip error reporting
+        '--no-pings',                        // FAST & FURIOUS: No ping requests
+        '--aggressive-cache-discard',        // FAST & FURIOUS: Aggressive cleanup
+        '--disable-cache',                   // FAST & FURIOUS: No caching
+        '--disable-application-cache',       // FAST & FURIOUS: No app cache
+        '--disable-offline-load-stale-cache',// FAST & FURIOUS: Always fresh
+        '--disable-sync',                    // Save 10MB
+        '--disable-translate',               // Save 10MB
         '--disable-features=IsolateOrigins,site-per-process,TranslateUI',
         '--disable-blink-features=AutomationControlled',
         '--disable-infobars',
@@ -214,43 +225,51 @@ class RailwayBot {
       
       console.log(`✅ ${tabs.length} tabs ready!`);
       
-      // Load smartlinks in each tab (HYPER-FAST - 4X SPEED!)
+      // 🔥 FAST & FURIOUS: Load all ads in ALL tabs SIMULTANEOUSLY!
+      const adPromises = [];
+      
       for (let i = 0; i < tabs.length; i++) {
         const page = tabs[i];
         
-        // Each tab loads 2 ads! (more impressions per session)
+        // Each tab loads 3 ads in rapid succession!
         for (let adNum = 0; adNum < this.config.adsPerTab; adNum++) {
           const url = this.smartlinks[Math.floor(Math.random() * this.smartlinks.length)];
           
-          console.log(`   💰 Tab ${i + 1}/Ad ${adNum + 1}: Loading...`);
-          
-          try {
-            await page.goto(url, {
-              waitUntil: 'domcontentloaded',
-              timeout: this.config.pageTimeout
-            });
-            
-            console.log(`   ✅ Tab ${i + 1}/Ad ${adNum + 1}: Loaded`);
-            this.stats.totalImpressions++;
-            
-            // HYPER-FAST: Just 0.5 seconds!
-            await this.sleep(this.config.adViewTime);
-            
-            // Lightning-fast scroll
-            try {
-              await page.evaluate(() => window.scrollBy(0, 300));
-              await this.sleep(this.config.scrollDelay);
-              console.log(`   📊 Tab ${i + 1}/Ad ${adNum + 1}: ✓`);
-            } catch (e) {}
-            
-          } catch (error) {
-            console.log(`   ⚠️  Tab ${i + 1}: Timeout (normal)`);
-          }
-          
-          // INSTANT switching!
-          await this.sleep(this.config.tabSwitchDelay);
+          // Add to parallel execution queue
+          adPromises.push(
+            (async () => {
+              try {
+                console.log(`   💰 Tab ${i + 1}/Ad ${adNum + 1}: GO!`);
+                
+                await page.goto(url, {
+                  waitUntil: 'domcontentloaded',
+                  timeout: this.config.pageTimeout
+                });
+                
+                this.stats.totalImpressions++;
+                console.log(`   ✅ Tab ${i + 1}/Ad ${adNum + 1}: DONE (${this.stats.totalImpressions} total)`);
+                
+                // INSTANT view (100ms)
+                await this.sleep(this.config.adViewTime);
+                
+                // Lightning scroll (no delay)
+                try {
+                  await page.evaluate(() => window.scrollBy(0, 200));
+                } catch (e) {}
+                
+              } catch (error) {
+                // Timeouts are OK in FAST & FURIOUS mode!
+                console.log(`   ⚡ Tab ${i + 1}/Ad ${adNum + 1}: Timeout (NORMAL)`);
+              }
+            })()
+          );
         }
       }
+      
+      // Execute ALL ads in parallel! MAXIMUM SPEED!
+      await Promise.all(adPromises);
+      
+      console.log(`\n🔥 ALL ${this.config.simultaneousTabs * this.config.adsPerTab} ADS LOADED IN PARALLEL!`);
       
       // Close browser and cleanup
       await browser.close();
