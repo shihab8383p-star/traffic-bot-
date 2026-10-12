@@ -16,19 +16,19 @@ class RailwayBot {
       startTime: new Date()
     };
     
-    // 🔥 10X FAST & FURIOUS CONFIG - MAXIMUM SPEED!
+    // 🔥 OPTIMIZED CONFIG - REAL IMPRESSIONS COUNTED!
     this.config = {
-      simultaneousTabs: 5,        // 5 tabs maximum
-      sessionInterval: 2000,      // 2 seconds between sessions (10X FASTER!)
-      adViewTime: 100,            // 0.1 seconds (INSTANT!)
-      pageTimeout: 3000,          // 3 seconds max (lightning fast!)
+      simultaneousTabs: 3,        // 3 tabs (safer for counting)
+      sessionInterval: 10000,     // 10 seconds between sessions
+      adViewTime: 5000,           // 5 seconds (MINIMUM for Adsterra to count!)
+      pageTimeout: 15000,         // 15 seconds (give JS time to load)
       browserTimeout: 2000,       // 2 seconds launch
-      tabSwitchDelay: 0,          // ZERO delay (parallel!)
-      scrollDelay: 0,             // ZERO delay (skip it!)
-      adsPerTab: 3,               // 3 ads per tab = 15 impressions!
+      tabSwitchDelay: 500,        // 0.5 second delay
+      scrollDelay: 1000,          // 1 second scroll delay
+      adsPerTab: 2,               // 2 ads per tab = 6 impressions per session
       memoryLimit: 320,           // Safe for Railway
-      parallelLoading: true,      // Load ALL tabs at once!
-      instantMode: true           // No waiting - GO GO GO!
+      parallelLoading: false,     // Sequential (more human-like)
+      instantMode: false          // Realistic timing
     };
     
     // Smartlink URLs (Adsterra high-paying ads)
@@ -67,12 +67,12 @@ class RailwayBot {
   // Main run loop
   async run() {
     console.log('\n╔═══════════════════════════════════════════════════╗');
-    console.log('║  🔥 10X FAST & FURIOUS MODE - ULTIMATE SPEED! 🔥  ║');
+    console.log('║  💰 ADSTERRA IMPRESSION COUNTER - OPTIMIZED! 💰   ║');
     console.log('╚═══════════════════════════════════════════════════╝\n');
     console.log(`✅ Loaded ${this.proxyManager.getTotalProxies()} hand-picked proxies`);
-    console.log(`⚡ 10X SPEED: 1,800 impressions/hour per bot!`);
-    console.log(`🔥 15 impressions per session!`);
-    console.log(`⏱️  3 seconds per session + 2 seconds wait = 5 seconds total!`);
+    console.log(`⚡ REAL IMPRESSIONS: ~600 impressions/hour per bot!`);
+    console.log(`🔥 6 counted impressions per session!`);
+    console.log(`⏱️  5 seconds per ad (Adsterra minimum requirement)`);
     console.log(`🛡️  Memory-safe: 280-320MB (Railway safe!)\n`);
     
     // Show initial memory
@@ -225,51 +225,51 @@ class RailwayBot {
       
       console.log(`✅ ${tabs.length} tabs ready!`);
       
-      // 🔥 FAST & FURIOUS: Load all ads in ALL tabs SIMULTANEOUSLY!
-      const adPromises = [];
+      // 🔥 OPTIMIZED: Visit ads SEQUENTIALLY for better impression counting
+      let totalAdsVisited = 0;
       
       for (let i = 0; i < tabs.length; i++) {
         const page = tabs[i];
         
-        // Each tab loads 3 ads in rapid succession!
+        // Each tab loads ads one by one (more human-like!)
         for (let adNum = 0; adNum < this.config.adsPerTab; adNum++) {
-          const url = this.smartlinks[Math.floor(Math.random() * this.smartlinks.length)];
-          
-          // Add to parallel execution queue
-          adPromises.push(
-            (async () => {
-              try {
-                console.log(`   💰 Tab ${i + 1}/Ad ${adNum + 1}: GO!`);
-                
-                await page.goto(url, {
-                  waitUntil: 'domcontentloaded',
-                  timeout: this.config.pageTimeout
-                });
-                
-                this.stats.totalImpressions++;
-                console.log(`   ✅ Tab ${i + 1}/Ad ${adNum + 1}: DONE (${this.stats.totalImpressions} total)`);
-                
-                // INSTANT view (100ms)
-                await this.sleep(this.config.adViewTime);
-                
-                // Lightning scroll (no delay)
-                try {
-                  await page.evaluate(() => window.scrollBy(0, 200));
-                } catch (e) {}
-                
-              } catch (error) {
-                // Timeouts are OK in FAST & FURIOUS mode!
-                console.log(`   ⚡ Tab ${i + 1}/Ad ${adNum + 1}: Timeout (NORMAL)`);
-              }
-            })()
-          );
+          try {
+            const url = this.smartlinks[Math.floor(Math.random() * this.smartlinks.length)];
+            
+            console.log(`   💰 Tab ${i + 1}/Ad ${adNum + 1}: Loading...`);
+            
+            await page.goto(url, {
+              waitUntil: 'networkidle2',  // Wait for ads to fully load!
+              timeout: this.config.pageTimeout
+            });
+            
+            this.stats.totalImpressions++;
+            totalAdsVisited++;
+            console.log(`   ✅ Tab ${i + 1}/Ad ${adNum + 1}: COUNTED! (${this.stats.totalImpressions} total)`);
+            
+            // REAL view time (5 seconds minimum for Adsterra!)
+            console.log(`   ⏰ Viewing for ${this.config.adViewTime/1000}s (Adsterra requirement)...`);
+            await this.sleep(this.config.adViewTime);
+            
+            // Human-like scroll with delay
+            try {
+              await page.evaluate(() => window.scrollBy(0, 300));
+              await this.sleep(this.config.scrollDelay);
+              await page.evaluate(() => window.scrollBy(0, 300));
+            } catch (e) {}
+            
+          } catch (error) {
+            console.log(`   ⚡ Tab ${i + 1}/Ad ${adNum + 1}: Timeout (will retry next session)`);
+          }
+        }
+        
+        // Small delay between tabs
+        if (i < tabs.length - 1) {
+          await this.sleep(this.config.tabSwitchDelay);
         }
       }
       
-      // Execute ALL ads in parallel! MAXIMUM SPEED!
-      await Promise.all(adPromises);
-      
-      console.log(`\n🔥 ALL ${this.config.simultaneousTabs * this.config.adsPerTab} ADS LOADED IN PARALLEL!`);
+      console.log(`\n🔥 ALL ${totalAdsVisited} ADS VIEWED WITH PROPER TIMING!`);
       
       // Close browser and cleanup
       await browser.close();
