@@ -20,7 +20,7 @@ class RailwayBot {
     this.config = {
       simultaneousTabs: 5,        // 5 tabs (SAFE for Railway - no crashes!)
       sessionInterval: 8000,      // 8 seconds between sessions
-      adViewTime: 3000,           // 3 seconds (faster but still counted!)
+      adViewTime: 5000,           // 5 seconds (GUARANTEED COUNT!)
       pageTimeout: 12000,         // 12 seconds
       browserTimeout: 2000,       // 2 seconds launch
       tabSwitchDelay: 300,        // 0.3 second delay (faster!)
@@ -67,11 +67,9 @@ class RailwayBot {
     console.log('║  🔥 OCT 7TH MODE - SAFE & STABLE VERSION! 🔥     ║');
     console.log('╚═══════════════════════════════════════════════════╝\n');
     console.log(`✅ Loaded ${this.proxyManager.getTotalProxies()} hand-picked proxies`);
-    console.log(`⚡ SPEED: ~750 impressions/hour per bot!`);
+    console.log(`⚡ SPEED: ~600 impressions/hour per bot!`);
     console.log(`🔥 10 impressions per session (5 tabs × 2 ads)!`);
-    console.log(`⏱️  3 seconds per ad (fast but counted!)`);
-    console.log(`🚀 PARALLEL LOADING like Oct 7th!`);
-    console.log(`🛡️  Memory: 280-320MB (100% CRASH-PROOF!)\n`);
+    console.log(`⏱️  5 seconds per ad (GUARANTEED COUNT!)`);
     
     // Show initial memory
     const initMem = this.getMemoryUsage();
