@@ -31,10 +31,9 @@ class RailwayBot {
       instantMode: true           // FAST MODE like Oct 7th!
     };
     
-    // 🔥 YOUR 2 BEST ADSTERRA SMARTLINKS (HIGH PAYING!)
+    // 🎯 YOUR SINGLE BEST ADSTERRA SMARTLINK (HIGHEST PAYING!)
     this.smartlinks = [
-      'https://oatstuckalfred.com/b1k0d8tddz?key=63f2065791683072cc66284d81040d48',
-      'https://oatstuckalfred.com/waabkyh8?key=5e3c45ce83d8ec08d90f25db84c33279'
+      'https://oatstuckalfred.com/pgghjpvahq?key=b54923b02bad9ca5d730e2f7fcf10256'
     ];
   }
   
