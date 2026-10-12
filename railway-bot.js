@@ -16,19 +16,19 @@ class RailwayBot {
       startTime: new Date()
     };
     
-    // 🔥 OCTOBER 7TH WINNING CONFIG - SAFE & STABLE!
+    // 🔥 OCTOBER 7TH WINNING CONFIG - MAXIMUM QUALITY!
     this.config = {
       simultaneousTabs: 5,        // 5 tabs (SAFE for Railway - no crashes!)
-      sessionInterval: 8000,      // 8 seconds between sessions
-      adViewTime: 5000,           // 5 seconds (GUARANTEED COUNT!)
-      pageTimeout: 12000,         // 12 seconds
+      sessionInterval: 10000,     // 10 seconds between sessions
+      adViewTime: 15000,          // 15 seconds (MAXIMUM QUALITY TRAFFIC!)
+      pageTimeout: 20000,         // 20 seconds
       browserTimeout: 2000,       // 2 seconds launch
-      tabSwitchDelay: 300,        // 0.3 second delay (faster!)
-      scrollDelay: 500,           // 0.5 second scroll (faster!)
+      tabSwitchDelay: 300,        // 0.3 second delay
+      scrollDelay: 1000,          // 1 second scroll
       adsPerTab: 2,               // 2 ads per tab = 10 impressions per session!
       memoryLimit: 320,           // Safe limit for 5 tabs (under 512MB)
       parallelLoading: true,      // PARALLEL like Oct 7th!
-      instantMode: true           // FAST MODE like Oct 7th!
+      instantMode: false          // Quality mode (15s view!)
     };
     
     // 🎯 YOUR SINGLE BEST ADSTERRA SMARTLINK (HIGHEST PAYING!)
@@ -64,12 +64,12 @@ class RailwayBot {
   // Main run loop
   async run() {
     console.log('\n╔═══════════════════════════════════════════════════╗');
-    console.log('║  🔥 OCT 7TH MODE - SAFE & STABLE VERSION! 🔥     ║');
+    console.log('║  💎 PREMIUM QUALITY MODE - 15 SECOND VIEW! 💎    ║');
     console.log('╚═══════════════════════════════════════════════════╝\n');
     console.log(`✅ Loaded ${this.proxyManager.getTotalProxies()} hand-picked proxies`);
-    console.log(`⚡ SPEED: ~600 impressions/hour per bot!`);
+    console.log(`💎 QUALITY: ~240 PREMIUM impressions/hour per bot!`);
     console.log(`🔥 10 impressions per session (5 tabs × 2 ads)!`);
-    console.log(`⏱️  5 seconds per ad (GUARANTEED COUNT!)`);
+    console.log(`⏱️  15 SECONDS per ad (PREMIUM QUALITY!)`);
     
     // Show initial memory
     const initMem = this.getMemoryUsage();
