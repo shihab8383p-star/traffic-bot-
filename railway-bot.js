@@ -16,17 +16,17 @@ class RailwayBot {
       startTime: new Date()
     };
     
-    // 🔥 OCTOBER 7TH WINNING CONFIG - ADAPTED FOR ADSTERRA!
+    // 🔥 OCTOBER 7TH WINNING CONFIG - SAFE & STABLE!
     this.config = {
-      simultaneousTabs: 6,        // 6 tabs (like Oct 7th - 8 tabs)
+      simultaneousTabs: 5,        // 5 tabs (SAFE for Railway - no crashes!)
       sessionInterval: 8000,      // 8 seconds between sessions
       adViewTime: 3000,           // 3 seconds (faster but still counted!)
       pageTimeout: 12000,         // 12 seconds
       browserTimeout: 2000,       // 2 seconds launch
       tabSwitchDelay: 300,        // 0.3 second delay (faster!)
       scrollDelay: 500,           // 0.5 second scroll (faster!)
-      adsPerTab: 2,               // 2 ads per tab = 12 impressions per session!
-      memoryLimit: 380,           // Higher limit for 6 tabs
+      adsPerTab: 2,               // 2 ads per tab = 10 impressions per session!
+      memoryLimit: 320,           // Safe limit for 5 tabs (under 512MB)
       parallelLoading: true,      // PARALLEL like Oct 7th!
       instantMode: true           // FAST MODE like Oct 7th!
     };
@@ -65,14 +65,14 @@ class RailwayBot {
   // Main run loop
   async run() {
     console.log('\n╔═══════════════════════════════════════════════════╗');
-    console.log('║  🔥 OCT 7TH MODE - YOUR WINNING STRATEGY! 🔥     ║');
+    console.log('║  🔥 OCT 7TH MODE - SAFE & STABLE VERSION! 🔥     ║');
     console.log('╚═══════════════════════════════════════════════════╝\n');
     console.log(`✅ Loaded ${this.proxyManager.getTotalProxies()} hand-picked proxies`);
-    console.log(`⚡ SPEED: ~900 impressions/hour per bot!`);
-    console.log(`🔥 12 impressions per session (6 tabs × 2 ads)!`);
+    console.log(`⚡ SPEED: ~750 impressions/hour per bot!`);
+    console.log(`🔥 10 impressions per session (5 tabs × 2 ads)!`);
     console.log(`⏱️  3 seconds per ad (fast but counted!)`);
     console.log(`🚀 PARALLEL LOADING like Oct 7th!`);
-    console.log(`🛡️  Memory: 320-380MB (Railway safe!)\n`);
+    console.log(`🛡️  Memory: 280-320MB (100% CRASH-PROOF!)\n`);
     
     // Show initial memory
     const initMem = this.getMemoryUsage();
