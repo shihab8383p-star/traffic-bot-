@@ -1,13 +1,14 @@
 {
   "name": "traffic-bot-railway",
   "version": "1.0.0",
-  "description": "Railway Traffic Bot - 10X FAST & FURIOUS",
+  "description": "Railway Traffic Bot",
   "main": "railway-bot.js",
   "scripts": {
     "start": "node railway-bot.js"
   },
   "engines": {
-    "node": "18.x"
+    "node": "20.x",
+    "npm": "10.x"
   },
   "dependencies": {
     "axios": "^1.6.0",

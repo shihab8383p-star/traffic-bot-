@@ -1,0 +1,35 @@
+🔍 RAILWAY UPLOAD TEST
+======================
+
+Files Railway WILL upload (not in .railwayignore):
+✅ railway-bot.js
+✅ proxy-manager-simple.js
+✅ proxies.json
+✅ package.json
+✅ package-lock.json
+✅ Procfile
+✅ nixpacks.toml
+✅ railway.json
+✅ .railwayignore (Railway reads this first!)
+
+Total: ~9 files, ~500KB
+
+Files Railway WILL IGNORE (in .railwayignore):
+❌ All .md files (200+ files)
+❌ All .txt files
+❌ All .bat files
+❌ All .ps1 files
+❌ auto-clicker-bot.js
+❌ index.js
+❌ pinterest-bot.js
+❌ reddit-bot.js
+❌ twitter-bot.js
+❌ All test-*.js files
+❌ All proxy-finder-*.js files
+❌ dashboard files
+❌ chrome/ folder
+❌ node_modules/ (Railway installs fresh)
+
+Total ignored: 190+ files
+
+✅ RESULT: Railway only sees 9 essential files!

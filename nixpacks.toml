@@ -1,11 +1,11 @@
 [phases.setup]
-nixPkgs = ['nodejs_18', 'chromium']
+nixPkgs = ['nodejs_20', 'chromium']
 
 [phases.install]
-cmds = ['npm ci']
+cmds = ['npm ci --legacy-peer-deps']
 
 [phases.build]
-cmds = ['echo "No build step required"']
+cmds = ['echo "Build complete"']
 
 [start]
 cmd = 'node railway-bot.js'
