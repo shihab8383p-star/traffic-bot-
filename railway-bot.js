@@ -128,7 +128,7 @@ class RailwayBot {
     if (memBefore.rss > 450) {
       console.log(`⚠️  Memory critical (${memBefore.rss}MB)! Skipping session and cleaning up...`);
       this.forceGarbageCollection();
-      await this.sleep(5000); // Extra wait for cleanup
+      await this.sleep(10000); // Wait 10 seconds for cleanup
       return false;
     }
     
@@ -146,16 +146,14 @@ class RailwayBot {
         '--disable-background-networking',   // Save 15MB
         '--disable-sync',                    // Save 10MB
         '--disable-translate',               // Save 10MB
-        '--disable-hang-monitor',            // FAST & FURIOUS: Skip hang detection
-        '--disable-prompt-on-repost',        // FAST & FURIOUS: No prompts
-        '--disable-domain-reliability',      // FAST & FURIOUS: Skip error reporting
-        '--no-pings',                        // FAST & FURIOUS: No ping requests
-        '--aggressive-cache-discard',        // FAST & FURIOUS: Aggressive cleanup
-        '--disable-cache',                   // FAST & FURIOUS: No caching
-        '--disable-application-cache',       // FAST & FURIOUS: No app cache
-        '--disable-offline-load-stale-cache',// FAST & FURIOUS: Always fresh
-        '--disable-sync',                    // Save 10MB
-        '--disable-translate',               // Save 10MB
+        '--disable-hang-monitor',            
+        '--disable-prompt-on-repost',        
+        '--disable-domain-reliability',      
+        '--no-pings',                        
+        '--aggressive-cache-discard',        
+        '--disable-cache',                   
+        '--disable-application-cache',       
+        '--disable-offline-load-stale-cache',
         '--disable-features=IsolateOrigins,site-per-process,TranslateUI',
         '--disable-blink-features=AutomationControlled',
         '--disable-infobars',
@@ -172,10 +170,12 @@ class RailwayBot {
         '--disable-breakpad',                // No crash reporting (saves memory)
         '--disable-component-update',
         '--metrics-recording-only',
-        '--window-size=1280,720',            // Smaller viewport = less memory
-        '--disk-cache-size=1',               // Minimal cache
+        '--window-size=1280,720',            
+        '--disk-cache-size=1',               
         '--media-cache-size=1',
-        '--disable-web-security'
+        '--disable-web-security',
+        '--disable-crash-reporter',          // CRITICAL: Disable crashpad handler
+        '--disable-crashpad'                 // CRITICAL: Prevent posix_spawn error
       ];
       
       // Add proxy if available
@@ -278,6 +278,25 @@ class RailwayBot {
       
     } catch (error) {
       console.error(`❌ Session error: ${error.message}`);
+      
+      // Check if it's the posix_spawn error (resource exhaustion)
+      if (error.message.includes('posix_spawn') || error.message.includes('Resource temporarily unavailable')) {
+        console.log(`🔧 DETECTED RESOURCE EXHAUSTION - Taking recovery actions...`);
+        
+        // Mark proxy as dead if it caused the failure
+        if (proxy) {
+          console.log(`⚡ Temporarily skipping proxy: ${proxy.host}:${proxy.port}`);
+        }
+        
+        // Force cleanup
+        this.forceGarbageCollection();
+        
+        // LONG WAIT for system recovery
+        console.log(`⏰ Waiting 30 seconds for system to recover...`);
+        await this.sleep(30000); // 30 second recovery
+        
+        return false;
+      }
       
       // Mark proxy as dead if it caused the failure
       if (proxy && error.message.includes('ERR_PROXY')) {
