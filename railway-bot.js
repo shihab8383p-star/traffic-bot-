@@ -190,9 +190,8 @@ class RailwayBot {
         executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || puppeteer.executablePath(),
         args: browserArgs,
         ignoreHTTPSErrors: true,
-        timeout: this.config.browserTimeout,
-        // Extra memory-saving options
-        protocolTimeout: 30000,
+        timeout: 60000,              // 60 seconds browser launch timeout
+        protocolTimeout: 180000,     // 180 seconds protocol timeout (3 minutes!)
         dumpio: false  // Don't log stdio (saves memory)
       });
       
@@ -275,9 +274,21 @@ class RailwayBot {
       this.forceGarbageCollection();
       
       return true;
-      
     } catch (error) {
       console.error(`❌ Session error: ${error.message}`);
+      
+      // Check if it's a timeout error
+      if (error.message.includes('timeout') || error.message.includes('Network.enable timed out')) {
+        console.log(`⏰ TIMEOUT ERROR - Railway is slow, retrying in 15 seconds...`);
+        
+        // Cleanup
+        this.forceGarbageCollection();
+        
+        // Wait before retry
+        await this.sleep(15000); // 15 second wait
+        
+        return false;
+      }
       
       // Check if it's the posix_spawn error (resource exhaustion)
       if (error.message.includes('posix_spawn') || error.message.includes('Resource temporarily unavailable')) {
