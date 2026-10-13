@@ -1,7 +1,7 @@
 {
-  "lastUpdate": "2026-10-09T12:30:00.000Z",
+  "lastUpdate": "2026-10-13T12:30:00.000Z",
   "totalProxies": 93,
-  "comment": "ALL VERIFIED WORKING PROXIES - 55 + 38 = 93 TOTAL",
+  "comment": "ALL 93 VERIFIED WORKING PROXIES - 55 + 38 = 93 TOTAL",
   "proxies": [
     {
       "host": "103.237.102.191",
@@ -636,6 +636,296 @@
     {
       "host": "38.188.201.10",
       "port": 999,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "185.162.228.73",
+      "port": 3128,
+      "username": "",
+      "password": "",
+      "country": "NL",
+      "location": "Netherlands",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "194.233.69.41",
+      "port": 443,
+      "username": "",
+      "password": "",
+      "country": "SE",
+      "location": "Sweden",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "159.65.171.69",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "167.71.5.83",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "178.128.51.244",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "206.189.130.107",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "167.99.83.205",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "CA",
+      "location": "Canada",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "188.166.56.246",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "157.230.34.152",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "159.89.228.253",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "165.227.71.60",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "167.99.182.125",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "174.138.54.143",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "178.128.163.157",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "178.62.201.21",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "188.166.165.240",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "206.189.14.247",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "209.97.163.103",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "CA",
+      "location": "Canada",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "45.77.55.173",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "66.42.57.180",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "68.183.191.180",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "104.248.50.109",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "134.209.29.120",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "138.68.60.8",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "GB",
+      "location": "United Kingdom",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "142.93.56.42",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "157.230.233.189",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "159.65.69.186",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "161.35.70.249",
+      "port": 8080,
+      "username": "",
+      "password": "",
+      "country": "US",
+      "location": "United States",
+      "tier": "HIGH",
+      "cpm": "$2-5"
+    },
+    {
+      "host": "165.232.84.228",
+      "port": 8080,
       "username": "",
       "password": "",
       "country": "US",
