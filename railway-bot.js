@@ -1,4 +1,4 @@
-// 🚀 RAILWAY ULTRA-FAST BOT - 2x FASTER + CRASH-PROOF!
+// 🚀 RAILWAY SUPER FAST BOT - 44 VERIFIED PROXIES + MAXIMUM SPEED!
 // Optimized for Railway's 512MB memory limit
 
 const puppeteer = require('puppeteer');
@@ -16,19 +16,19 @@ class RailwayBot {
       startTime: new Date()
     };
     
-    // 🚀 6X SUPER FAST MODE - 12 SECOND VIEW!
+    // 🚀 SUPER FAST MODE - 44 VERIFIED PROXIES (MAXIMUM SPEED!)
     this.config = {
-      simultaneousTabs: 6,        // 6 tabs (6X FASTER!)
-      sessionInterval: 5000,      // 5 seconds between sessions (SUPER FAST!)
-      adViewTime: 12000,          // 12 seconds (BALANCED - fast + counted!)
-      pageTimeout: 15000,         // 15 seconds
+      simultaneousTabs: 6,        // 6 TABS = SUPER FAST!
+      sessionInterval: 6000,      // 6 seconds between sessions (FASTER!)
+      adViewTime: 10000,          // 10 seconds (FAST + COUNTED!)
+      pageTimeout: 12000,         // 12 seconds
       browserTimeout: 2000,       // 2 seconds launch
-      tabSwitchDelay: 200,        // 0.2 second (LIGHTNING!)
-      scrollDelay: 500,           // 0.5 second scroll
+      tabSwitchDelay: 200,        // 0.2 second
+      scrollDelay: 300,           // 0.3 second scroll (faster!)
       adsPerTab: 2,               // 2 ads per tab = 12 impressions per session!
-      memoryLimit: 360,           // Safe for 6 tabs
-      parallelLoading: true,      // ALL tabs at once!
-      instantMode: true           // SUPER FAST MODE!
+      memoryLimit: 350,           // Higher limit for speed
+      parallelLoading: true,      // ALL tabs at once
+      instantMode: true           // FAST MODE
     };
     
     // 🎯 YOUR SINGLE BEST ADSTERRA SMARTLINK (HIGHEST PAYING!)
@@ -64,12 +64,13 @@ class RailwayBot {
   // Main run loop
   async run() {
     console.log('\n╔═══════════════════════════════════════════════════╗');
-    console.log('║  ⚡ 6X SUPER FAST MODE - 12 SEC VIEW! ⚡         ║');
+    console.log('║  🚀 SUPER FAST MODE - 44 VERIFIED PROXIES! 🚀    ║');
     console.log('╚═══════════════════════════════════════════════════╝\n');
-    console.log(`✅ Loaded ${this.proxyManager.getTotalProxies()} hand-picked proxies`);
-    console.log(`⚡ 6X SPEED: ~720 impressions/hour per bot!`);
+    console.log(`✅ Loaded ${this.proxyManager.getTotalProxies()} VERIFIED proxies`);
+    console.log(`⚡ SUPER SPEED: ~720 impressions/hour per bot!`);
     console.log(`🔥 12 impressions per session (6 tabs × 2 ads)!`);
-    console.log(`⏱️  12 seconds per ad (FAST + COUNTED!)`);
+    console.log(`⏱️  10 seconds per ad (SUPER FAST + COUNTED!)`);
+    console.log(`🛡️  CRASH-PROOF: 60s recovery on errors!`);
     
     // Show initial memory
     const initMem = this.getMemoryUsage();
@@ -277,6 +278,22 @@ class RailwayBot {
     } catch (error) {
       console.error(`❌ Session error: ${error.message}`);
       
+      // Check for pthread_create / thread exhaustion errors
+      if (error.message.includes('pthread_create') || 
+          error.message.includes('Resource temporarily unavailable') ||
+          error.message.includes('Failed to launch the browser')) {
+        console.log(`🆘 CRITICAL: System resource exhaustion detected!`);
+        console.log(`⏰ EMERGENCY RECOVERY: Waiting 60 seconds for Railway to recover...`);
+        
+        // Force cleanup
+        this.forceGarbageCollection();
+        
+        // VERY LONG WAIT for full system recovery
+        await this.sleep(60000); // 60 seconds (1 minute!)
+        
+        return false;
+      }
+      
       // Check if it's a timeout error
       if (error.message.includes('timeout') || error.message.includes('Network.enable timed out')) {
         console.log(`⏰ TIMEOUT ERROR - Railway is slow, retrying in 15 seconds...`);
@@ -291,7 +308,7 @@ class RailwayBot {
       }
       
       // Check if it's the posix_spawn error (resource exhaustion)
-      if (error.message.includes('posix_spawn') || error.message.includes('Resource temporarily unavailable')) {
+      if (error.message.includes('posix_spawn')) {
         console.log(`🔧 DETECTED RESOURCE EXHAUSTION - Taking recovery actions...`);
         
         // Mark proxy as dead if it caused the failure
