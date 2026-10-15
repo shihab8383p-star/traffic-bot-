@@ -37,7 +37,7 @@ class RailwayBot {
     };
     
     // 🎯 NEW AD LINK (ONLY THIS ONE!)
-    this.adLink = 'https://uplcm.com/4/11918414';
+    this.adLink = 'https://link.gigapub.tech/l/992cv77g9v';
     
     // 📱 Device distribution: 8% Desktop, 62% iOS, 30% Android
     this.deviceTypes = {
