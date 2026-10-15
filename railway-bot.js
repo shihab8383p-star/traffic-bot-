@@ -33,7 +33,7 @@ class RailwayBot {
       memoryLimit: 350,           // Higher limit for speed
       parallelLoading: true,      // PARALLEL loading (MAXIMUM SPEED!)
       sessionBeforeRestart: 20,   // Restart after 20 sessions (every ~2 minutes)
-      maxRuntime: 20 * 60 * 1000  // Full restart every 20 minutes (prevents crashes)
+      maxRuntime: 3 * 60 * 60 * 1000  // Full restart every 3 HOURS (prevents crashes)
     };
     
     // 🎯 NEW AD LINK (ONLY THIS ONE!)
@@ -158,7 +158,7 @@ class RailwayBot {
     console.log(`🔥 24 impressions per session (8 tabs × 3 ads)!`);
     console.log(`⚡ 5X FASTER = ~1440 impressions/hour!`);
     console.log(`⏱️  8 seconds per ad (SUPER FAST!)`);
-    console.log(`🛡️  AUTO-RESTART: Every 20 minutes (prevents crashes!)`);
+    console.log(`🛡️  AUTO-RESTART: Every 3 hours (prevents crashes!)`);
     console.log(`⚡ PARALLEL LOADING: Maximum speed!\n`);
     
     // Show initial memory
@@ -168,9 +168,9 @@ class RailwayBot {
     let sessionCount = 0;
     
     while (true) {
-      // Check if we need a full restart (every 20 minutes)
+      // Check if we need a full restart (every 3 hours)
       if (this.needsRestart()) {
-        console.log('\n🔄 20 MINUTE RUNTIME REACHED - RESTARTING PROCESS...');
+        console.log('\n🔄 3 HOUR RUNTIME REACHED - RESTARTING PROCESS...');
         console.log('📊 Final Stats:');
         console.log(`   Total Impressions: ${this.stats.totalImpressions}`);
         console.log(`   iOS: ${this.stats.iosCount} | Android: ${this.stats.androidCount} | Desktop: ${this.stats.desktopCount}`);
@@ -207,10 +207,11 @@ class RailwayBot {
       // Print stats with memory usage
       const mem = this.getMemoryUsage();
       const uptimeMinutes = Math.round((Date.now() - this.stats.lastRestartTime.getTime()) / 60000);
+      const uptimeHours = (uptimeMinutes / 60).toFixed(1);
       console.log(`\n📊 Stats: ${this.stats.totalImpressions} impressions | ${this.stats.successfulSessions}/${this.stats.totalSessions} sessions`);
       console.log(`📱 Devices: iOS ${this.stats.iosCount} | Android ${this.stats.androidCount} | Desktop ${this.stats.desktopCount}`);
       console.log(`💾 Memory: ${mem.rss}MB RSS / ${mem.heapUsed}MB Heap`);
-      console.log(`⏱️  Uptime: ${uptimeMinutes} minutes (restart at 20 min)`);
+      console.log(`⏱️  Uptime: ${uptimeHours} hours (restart at 3.0 hours)`);
       
       // Aggressive memory cleanup
       if (mem.rss > this.config.memoryLimit) {
