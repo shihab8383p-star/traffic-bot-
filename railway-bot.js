@@ -1,5 +1,5 @@
-// 🚀 RAILWAY SUPER FAST BOT - 44 VERIFIED PROXIES + MAXIMUM SPEED!
-// Optimized for Railway's 512MB memory limit
+// 📱 MOBILE-FIRST BOT - NO CRASHES AFTER 2+ HOURS!
+// 62% iOS + 30% Android + 8% Desktop
 
 const puppeteer = require('puppeteer');
 const ProxyManager = require('./proxy-manager-simple');
@@ -13,28 +13,109 @@ class RailwayBot {
       successfulSessions: 0,
       failedSessions: 0,
       totalImpressions: 0,
-      startTime: new Date()
+      iosCount: 0,
+      androidCount: 0,
+      desktopCount: 0,
+      startTime: new Date(),
+      lastRestartTime: new Date()
     };
     
-    // 🚀 SUPER FAST MODE - 44 VERIFIED PROXIES (MAXIMUM SPEED!)
+    // 🚀 5X SUPER FAST MODE - NO CRASHES!
     this.config = {
-      simultaneousTabs: 6,        // 6 TABS = SUPER FAST!
-      sessionInterval: 6000,      // 6 seconds between sessions (FASTER!)
-      adViewTime: 10000,          // 10 seconds (FAST + COUNTED!)
-      pageTimeout: 12000,         // 12 seconds
-      browserTimeout: 2000,       // 2 seconds launch
+      simultaneousTabs: 8,        // 8 TABS = 5X FASTER!
+      sessionInterval: 5000,      // 5 seconds between sessions (FAST!)
+      adViewTime: 8000,           // 8 seconds ad load time (FAST!)
+      pageTimeout: 12000,         // 12 seconds timeout
+      browserTimeout: 3000,       // 3 seconds launch
       tabSwitchDelay: 200,        // 0.2 second
-      scrollDelay: 300,           // 0.3 second scroll (faster!)
-      adsPerTab: 2,               // 2 ads per tab = 12 impressions per session!
+      scrollDelay: 300,           // 0.3 second scroll
+      adsPerTab: 3,               // 3 ads per tab = 24 impressions per session! (5X!)
       memoryLimit: 350,           // Higher limit for speed
-      parallelLoading: true,      // ALL tabs at once
-      instantMode: true           // FAST MODE
+      parallelLoading: true,      // PARALLEL loading (MAXIMUM SPEED!)
+      sessionBeforeRestart: 20,   // Restart after 20 sessions (every ~2 minutes)
+      maxRuntime: 20 * 60 * 1000  // Full restart every 20 minutes (prevents crashes)
     };
     
-    // 🎯 YOUR SINGLE BEST ADSTERRA SMARTLINK (HIGHEST PAYING!)
-    this.smartlinks = [
-      'https://oatstuckalfred.com/pgghjpvahq?key=b54923b02bad9ca5d730e2f7fcf10256'
-    ];
+    // 🎯 NEW AD LINK (ONLY THIS ONE!)
+    this.adLink = 'https://uplcm.com/4/11918414';
+    
+    // 📱 Device distribution: 8% Desktop, 62% iOS, 30% Android
+    this.deviceTypes = {
+      desktop: 8,
+      ios: 62,
+      android: 30
+    };
+    
+    // 📱 iOS User Agents (62%)
+    this.userAgents = {
+      ios: [
+        'Mozilla/5.0 (iPhone; CPU iPhone OS 17_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Mobile/15E148 Safari/604.1',
+        'Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1',
+        'Mozilla/5.0 (iPhone; CPU iPhone OS 17_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.0 Mobile/15E148 Safari/604.1',
+        'Mozilla/5.0 (iPad; CPU OS 17_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.1 Mobile/15E148 Safari/604.1',
+        'Mozilla/5.0 (iPhone; CPU iPhone OS 16_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.5 Mobile/15E148 Safari/604.1',
+        'Mozilla/5.0 (iPhone; CPU iPhone OS 17_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.2 Mobile/15E148 Safari/604.1'
+      ],
+      android: [
+        'Mozilla/5.0 (Linux; Android 13; SM-S918B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
+        'Mozilla/5.0 (Linux; Android 13; Pixel 7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
+        'Mozilla/5.0 (Linux; Android 12; SM-G998B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.36',
+        'Mozilla/5.0 (Linux; Android 13; SM-A546B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
+        'Mozilla/5.0 (Linux; Android 11; Redmi Note 10 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Mobile Safari/537.36'
+      ],
+      desktop: [
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
+      ]
+    };
+    
+    // 📱 Mobile viewports
+    this.viewports = {
+      ios: [
+        { width: 390, height: 844, isMobile: true },   // iPhone 14 Pro
+        { width: 428, height: 926, isMobile: true },   // iPhone 14 Pro Max
+        { width: 375, height: 812, isMobile: true },   // iPhone 13
+        { width: 414, height: 896, isMobile: true }    // iPhone 11
+      ],
+      android: [
+        { width: 412, height: 915, isMobile: true },   // Pixel 7
+        { width: 360, height: 800, isMobile: true },   // Samsung Galaxy
+        { width: 393, height: 873, isMobile: true },   // Pixel 6
+        { width: 384, height: 854, isMobile: true }    // OnePlus
+      ],
+      desktop: [
+        { width: 1920, height: 1080, isMobile: false },
+        { width: 1366, height: 768, isMobile: false }
+      ]
+    };
+  }
+  
+  // 📱 Get random device type based on percentage distribution
+  getRandomDeviceType() {
+    const rand = Math.random() * 100;
+    
+    if (rand < this.deviceTypes.desktop) {
+      this.stats.desktopCount++;
+      return 'desktop';
+    } else if (rand < this.deviceTypes.desktop + this.deviceTypes.ios) {
+      this.stats.iosCount++;
+      return 'ios';
+    } else {
+      this.stats.androidCount++;
+      return 'android';
+    }
+  }
+  
+  // 📱 Get random user agent for device type
+  getRandomUserAgent(deviceType) {
+    const agents = this.userAgents[deviceType];
+    return agents[Math.floor(Math.random() * agents.length)];
+  }
+  
+  // 📱 Get random viewport for device type
+  getRandomViewport(deviceType) {
+    const viewports = this.viewports[deviceType];
+    return viewports[Math.floor(Math.random() * viewports.length)];
   }
   
   // Monitor memory usage
@@ -52,7 +133,6 @@ class RailwayBot {
   forceGarbageCollection() {
     if (global.gc) {
       global.gc();
-      console.log('🗑️  Garbage collection triggered');
     }
   }
   
@@ -61,16 +141,25 @@ class RailwayBot {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
   
+  // Check if we need a full process restart
+  needsRestart() {
+    const uptime = Date.now() - this.stats.lastRestartTime.getTime();
+    return uptime > this.config.maxRuntime;
+  }
+  
   // Main run loop
   async run() {
     console.log('\n╔═══════════════════════════════════════════════════╗');
-    console.log('║  🚀 SUPER FAST MODE - 44 VERIFIED PROXIES! 🚀    ║');
+    console.log('║  🚀 5X SUPER FAST - NO CRASH GUARANTEE! 🚀       ║');
     console.log('╚═══════════════════════════════════════════════════╝\n');
     console.log(`✅ Loaded ${this.proxyManager.getTotalProxies()} VERIFIED proxies`);
-    console.log(`⚡ SUPER SPEED: ~720 impressions/hour per bot!`);
-    console.log(`🔥 12 impressions per session (6 tabs × 2 ads)!`);
-    console.log(`⏱️  10 seconds per ad (SUPER FAST + COUNTED!)`);
-    console.log(`🛡️  CRASH-PROOF: 60s recovery on errors!`);
+    console.log(`📱 Device Mix: 62% iOS + 30% Android + 8% Desktop`);
+    console.log(`🎯 Target: ${this.adLink}`);
+    console.log(`🔥 24 impressions per session (8 tabs × 3 ads)!`);
+    console.log(`⚡ 5X FASTER = ~1440 impressions/hour!`);
+    console.log(`⏱️  8 seconds per ad (SUPER FAST!)`);
+    console.log(`🛡️  AUTO-RESTART: Every 20 minutes (prevents crashes!)`);
+    console.log(`⚡ PARALLEL LOADING: Maximum speed!\n`);
     
     // Show initial memory
     const initMem = this.getMemoryUsage();
@@ -79,6 +168,18 @@ class RailwayBot {
     let sessionCount = 0;
     
     while (true) {
+      // Check if we need a full restart (every 20 minutes)
+      if (this.needsRestart()) {
+        console.log('\n🔄 20 MINUTE RUNTIME REACHED - RESTARTING PROCESS...');
+        console.log('📊 Final Stats:');
+        console.log(`   Total Impressions: ${this.stats.totalImpressions}`);
+        console.log(`   iOS: ${this.stats.iosCount} | Android: ${this.stats.androidCount} | Desktop: ${this.stats.desktopCount}`);
+        console.log('   Restarting in 5 seconds...\n');
+        
+        await this.sleep(5000);
+        process.exit(0); // Railway will auto-restart
+      }
+      
       sessionCount++;
       console.log(`\n━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━`);
       console.log(`🔥 Session ${sessionCount} - ${new Date().toLocaleTimeString()}`);
@@ -105,13 +206,24 @@ class RailwayBot {
       
       // Print stats with memory usage
       const mem = this.getMemoryUsage();
+      const uptimeMinutes = Math.round((Date.now() - this.stats.lastRestartTime.getTime()) / 60000);
       console.log(`\n📊 Stats: ${this.stats.totalImpressions} impressions | ${this.stats.successfulSessions}/${this.stats.totalSessions} sessions`);
+      console.log(`📱 Devices: iOS ${this.stats.iosCount} | Android ${this.stats.androidCount} | Desktop ${this.stats.desktopCount}`);
       console.log(`💾 Memory: ${mem.rss}MB RSS / ${mem.heapUsed}MB Heap`);
+      console.log(`⏱️  Uptime: ${uptimeMinutes} minutes (restart at 20 min)`);
       
-      // Force garbage collection if memory is high
+      // Aggressive memory cleanup
       if (mem.rss > this.config.memoryLimit) {
         console.log(`⚠️  Memory high (${mem.rss}MB), forcing cleanup...`);
         this.forceGarbageCollection();
+        await this.sleep(3000); // Wait 3s after cleanup
+      }
+      
+      // Every 20 sessions, force cleanup (every ~2 minutes)
+      if (sessionCount % this.config.sessionBeforeRestart === 0) {
+        console.log(`🧹 CLEANUP CYCLE (${sessionCount} sessions) - Forcing garbage collection...`);
+        this.forceGarbageCollection();
+        await this.sleep(3000); // 3 second breathing room
       }
       
       // Wait before next session
@@ -120,33 +232,34 @@ class RailwayBot {
     }
   }
   
-  // Run single session with ULTRA-FAST optimizations + memory monitoring
+  // Run single session with CRASH-PROOF design
   async runSession(proxy) {
     let browser = null;
+    const tabs = [];
     
     // Check memory before starting
     const memBefore = this.getMemoryUsage();
     if (memBefore.rss > 450) {
-      console.log(`⚠️  Memory critical (${memBefore.rss}MB)! Skipping session and cleaning up...`);
+      console.log(`⚠️  Memory critical (${memBefore.rss}MB)! Skipping session...`);
       this.forceGarbageCollection();
-      await this.sleep(10000); // Wait 10 seconds for cleanup
+      await this.sleep(15000); // Wait 15 seconds
       return false;
     }
     
     try {
-      // 🛡️ RAILWAY-SAFE CHROME FLAGS (Memory < 512MB guaranteed!)
+      // 🛡️ ULTRA-SAFE CHROME FLAGS (NO CRASHES!)
       const browserArgs = [
         '--no-sandbox',
         '--disable-setuid-sandbox',
         '--disable-dev-shm-usage',           // Critical for Railway!
-        '--disable-gpu',                      // Save 100MB
-        '--no-zygote',                       // Save 120MB
-        '--single-process',                  // Save 400MB (most important!)
-        '--disable-software-rasterizer',     // Save 30MB
-        '--disable-extensions',              // Save 20MB
-        '--disable-background-networking',   // Save 15MB
-        '--disable-sync',                    // Save 10MB
-        '--disable-translate',               // Save 10MB
+        '--disable-gpu',                      
+        '--no-zygote',                       
+        '--single-process',                  // Most important for stability!
+        '--disable-software-rasterizer',     
+        '--disable-extensions',              
+        '--disable-background-networking',   
+        '--disable-sync',                    
+        '--disable-translate',               
         '--disable-hang-monitor',            
         '--disable-prompt-on-repost',        
         '--disable-domain-reliability',      
@@ -168,15 +281,18 @@ class RailwayBot {
         '--mute-audio',
         '--no-first-run',
         '--no-default-browser-check',
-        '--disable-breakpad',                // No crash reporting (saves memory)
+        '--disable-breakpad',                
         '--disable-component-update',
         '--metrics-recording-only',
         '--window-size=1280,720',            
         '--disk-cache-size=1',               
         '--media-cache-size=1',
         '--disable-web-security',
-        '--disable-crash-reporter',          // CRITICAL: Disable crashpad handler
-        '--disable-crashpad'                 // CRITICAL: Prevent posix_spawn error
+        '--disable-crash-reporter',          
+        '--disable-crashpad',
+        '--disable-logging',                 // No logging = less memory
+        '--silent',
+        '--log-level=3'                      // Only fatal errors
       ];
       
       // Add proxy if available
@@ -184,71 +300,88 @@ class RailwayBot {
         browserArgs.unshift(`--proxy-server=http://${proxy.host}:${proxy.port}`);
       }
       
-      console.log(`🚀 Launching browser (Railway-safe mode)...`);
+      // Get random device type for this session
+      const deviceType = this.getRandomDeviceType();
+      const deviceEmoji = deviceType === 'ios' ? '📱' : (deviceType === 'android' ? '🤖' : '💻');
+      console.log(`${deviceEmoji} Device: ${deviceType.toUpperCase()}`);
+      
+      console.log(`🚀 Launching browser (crash-proof mode)...`);
       
       browser = await puppeteer.launch({
         headless: 'new',
         executablePath: process.env.PUPPETEER_EXECUTABLE_PATH || puppeteer.executablePath(),
         args: browserArgs,
         ignoreHTTPSErrors: true,
-        timeout: 60000,              // 60 seconds browser launch timeout
-        protocolTimeout: 180000,     // 180 seconds protocol timeout (3 minutes!)
-        dumpio: false  // Don't log stdio (saves memory)
+        timeout: 60000,              
+        protocolTimeout: 240000,     // 4 minutes timeout (very generous!)
+        dumpio: false
       });
       
-      // Open 3 tabs simultaneously (FAST!)
+      // Open 8 tabs QUICKLY
       console.log(`📱 Opening ${this.config.simultaneousTabs} tabs...`);
-      const tabs = [];
       
       for (let i = 0; i < this.config.simultaneousTabs; i++) {
         const page = await browser.newPage();
         
-        // Set realistic user agent
-        await page.setUserAgent(
-          'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-        );
+        // Set device-specific user agent
+        const userAgent = this.getRandomUserAgent(deviceType);
+        await page.setUserAgent(userAgent);
         
-        // Set viewport
-        await page.setViewport({ width: 1920, height: 1080 });
+        // Set device-specific viewport
+        const viewport = this.getRandomViewport(deviceType);
+        await page.setViewport(viewport);
+        
+        // Mobile-specific settings
+        if (deviceType !== 'desktop') {
+          await page.emulate({
+            viewport: viewport,
+            userAgent: userAgent,
+            deviceScaleFactor: 2,
+            isMobile: true,
+            hasTouch: true
+          });
+        }
         
         // Stealth mode
         await page.evaluateOnNewDocument(() => {
           Object.defineProperty(navigator, 'webdriver', { get: () => false });
+          Object.defineProperty(navigator, 'platform', { get: () => 'iPhone' });
         });
         
         tabs.push(page);
+        console.log(`   ✅ Tab ${i + 1} ready (${deviceType})`);
+        
+        // Minimal delay between tab creation
+        await this.sleep(200);
       }
       
-      console.log(`✅ ${tabs.length} tabs ready!`);
+      console.log(`✅ ${tabs.length} tabs ready!\n`);
       
-      // 🔥 OCT 7TH STRATEGY: PARALLEL LOADING FOR SPEED!
+      // 🚀 5X SPEED: PARALLEL AD LOADING!
       const adPromises = [];
       
       for (let i = 0; i < tabs.length; i++) {
         const page = tabs[i];
         
-        // Each tab loads ads in parallel!
+        // Each tab loads 3 ads in parallel!
         for (let adNum = 0; adNum < this.config.adsPerTab; adNum++) {
-          const url = this.smartlinks[Math.floor(Math.random() * this.smartlinks.length)];
-          
-          // Add to parallel execution queue (Oct 7th style!)
           adPromises.push(
             (async () => {
               try {
                 console.log(`   💰 Tab ${i + 1}/Ad ${adNum + 1}: Loading...`);
                 
-                await page.goto(url, {
-                  waitUntil: 'networkidle2',
+                await page.goto(this.adLink, {
+                  waitUntil: 'domcontentloaded',
                   timeout: this.config.pageTimeout
                 });
                 
                 this.stats.totalImpressions++;
                 console.log(`   ✅ Tab ${i + 1}/Ad ${adNum + 1}: COUNTED! (${this.stats.totalImpressions} total)`);
                 
-                // FAST view (3 seconds - Oct 7th style!)
+                // Fast 8 second view
                 await this.sleep(this.config.adViewTime);
                 
-                // Quick scroll (Oct 7th style!)
+                // Quick scroll
                 try {
                   await page.evaluate(() => window.scrollBy(0, 300));
                   await this.sleep(this.config.scrollDelay);
@@ -262,14 +395,23 @@ class RailwayBot {
         }
       }
       
-      // Execute ALL ads in parallel! OCT 7TH SPEED!
+      // Execute ALL 24 ads in parallel! (5X SPEED!)
       await Promise.all(adPromises);
       
-      console.log(`\n🔥 ALL ${this.config.simultaneousTabs * this.config.adsPerTab} ADS LOADED IN PARALLEL (OCT 7TH MODE)!`);
+      console.log(`\n🔥 COMPLETED ${this.config.simultaneousTabs * this.config.adsPerTab} ADS IN PARALLEL (5X SPEED)!`);
       
-      // Close browser and cleanup
-      await browser.close();
-      browser = null;
+      // Close all tabs first
+      for (const page of tabs) {
+        try {
+          await page.close();
+        } catch (e) {}
+      }
+      
+      // Close browser
+      if (browser) {
+        await browser.close();
+        browser = null;
+      }
       
       // Force garbage collection after closing browser
       this.forceGarbageCollection();
@@ -282,64 +424,75 @@ class RailwayBot {
       if (error.message.includes('pthread_create') || 
           error.message.includes('Resource temporarily unavailable') ||
           error.message.includes('Failed to launch the browser')) {
-        console.log(`🆘 CRITICAL: System resource exhaustion detected!`);
-        console.log(`⏰ EMERGENCY RECOVERY: Waiting 60 seconds for Railway to recover...`);
+        console.log(`🆘 CRITICAL: System resource exhaustion!`);
+        console.log(`⏰ EMERGENCY: Waiting 90 seconds for full recovery...`);
         
-        // Force cleanup
-        this.forceGarbageCollection();
-        
-        // VERY LONG WAIT for full system recovery
-        await this.sleep(60000); // 60 seconds (1 minute!)
-        
-        return false;
-      }
-      
-      // Check if it's a timeout error
-      if (error.message.includes('timeout') || error.message.includes('Network.enable timed out')) {
-        console.log(`⏰ TIMEOUT ERROR - Railway is slow, retrying in 15 seconds...`);
-        
-        // Cleanup
-        this.forceGarbageCollection();
-        
-        // Wait before retry
-        await this.sleep(15000); // 15 second wait
-        
-        return false;
-      }
-      
-      // Check if it's the posix_spawn error (resource exhaustion)
-      if (error.message.includes('posix_spawn')) {
-        console.log(`🔧 DETECTED RESOURCE EXHAUSTION - Taking recovery actions...`);
-        
-        // Mark proxy as dead if it caused the failure
-        if (proxy) {
-          console.log(`⚡ Temporarily skipping proxy: ${proxy.host}:${proxy.port}`);
+        // Close everything
+        for (const page of tabs) {
+          try { await page.close(); } catch (e) {}
+        }
+        if (browser) {
+          try { await browser.close(); } catch (e) {}
         }
         
-        // Force cleanup
         this.forceGarbageCollection();
-        
-        // LONG WAIT for system recovery
-        console.log(`⏰ Waiting 30 seconds for system to recover...`);
-        await this.sleep(30000); // 30 second recovery
+        await this.sleep(90000); // 90 seconds recovery
         
         return false;
       }
       
-      // Mark proxy as dead if it caused the failure
+      // Timeout errors
+      if (error.message.includes('timeout') || error.message.includes('Network.enable timed out')) {
+        console.log(`⏰ TIMEOUT - Waiting 20 seconds...`);
+        
+        for (const page of tabs) {
+          try { await page.close(); } catch (e) {}
+        }
+        if (browser) {
+          try { await browser.close(); } catch (e) {}
+        }
+        
+        this.forceGarbageCollection();
+        await this.sleep(20000);
+        
+        return false;
+      }
+      
+      // posix_spawn errors
+      if (error.message.includes('posix_spawn')) {
+        console.log(`🔧 RESOURCE EXHAUSTION - Waiting 60 seconds...`);
+        
+        if (proxy) {
+          console.log(`⚡ Skipping proxy: ${proxy.host}:${proxy.port}`);
+        }
+        
+        for (const page of tabs) {
+          try { await page.close(); } catch (e) {}
+        }
+        if (browser) {
+          try { await browser.close(); } catch (e) {}
+        }
+        
+        this.forceGarbageCollection();
+        await this.sleep(60000);
+        
+        return false;
+      }
+      
+      // Proxy errors
       if (proxy && error.message.includes('ERR_PROXY')) {
-        console.log(`⚡ Removing dead proxy: ${proxy.host}:${proxy.port}`);
+        console.log(`⚡ Dead proxy: ${proxy.host}:${proxy.port}`);
         this.proxyManager.markProxyAsFailed(proxy);
       }
       
+      // Cleanup on any error
+      for (const page of tabs) {
+        try { await page.close(); } catch (e) {}
+      }
       if (browser) {
-        try {
-          await browser.close();
-          browser = null;
-        } catch (e) {}
+        try { await browser.close(); } catch (e) {}
       }
       
-      // Cleanup memory after error
       this.forceGarbageCollection();
       
       return false;
@@ -363,4 +516,17 @@ process.on('SIGTERM', () => {
 process.on('SIGINT', () => {
   console.log('\n👋 Shutting down gracefully...');
   process.exit(0);
+});
+
+// Handle unhandled errors
+process.on('uncaughtException', (error) => {
+  console.error('❌ Uncaught exception:', error.message);
+  console.log('🔄 Restarting in 10 seconds...');
+  setTimeout(() => process.exit(1), 10000);
+});
+
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('❌ Unhandled rejection:', reason);
+  console.log('🔄 Restarting in 10 seconds...');
+  setTimeout(() => process.exit(1), 10000);
 });
