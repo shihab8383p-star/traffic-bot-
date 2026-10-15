@@ -16,7 +16,8 @@ class ProxyManager {
       const proxyFile = './proxies.json';
       if (fs.existsSync(proxyFile)) {
         const data = JSON.parse(fs.readFileSync(proxyFile, 'utf8'));
-        this.proxies = data.proxies || [];
+        // Support both formats: direct array or {proxies: array}
+        this.proxies = Array.isArray(data) ? data : (data.proxies || []);
         console.log(`✅ Loaded ${this.proxies.length} verified working proxies`);
       } else {
         console.log('❌ No proxies.json found!');
